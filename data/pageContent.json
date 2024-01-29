@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "title": "Jeu de dé en 3D",
+      "type": "Three JS",
+      "src": "./assets/project/portal/index.png"
+    },
+    {
+      "id": 1,
+      "title": "Windows XP React",
+      "type": "React/G6",
+      "src": "./assets/project/winxp/index.png"
+    }
+  ]
+}
