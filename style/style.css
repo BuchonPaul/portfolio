@@ -1,14 +1,18 @@
 :root {
   --o: 0.5;
   --r: -45deg;
-  --trans: 2s;
+  --trans: 0.5s;
 }
 
+@font-face {
+  font-family: gilroy;
+  src: url(../assets/font/Gilroy-Regular.woff2);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -16,6 +20,7 @@ body {
   justify-content: center;
   --backcol: #131313;
   --textcol: #d8d8d8;
+  transition: var(--trans);
 }
 body .menu {
   width: 95vw;
@@ -32,6 +37,7 @@ body .menu .logo {
   height: 50px;
   width: 50px;
   background: var(--textcol);
+  margin: 0px 20px;
 }
 body .menu .action {
   display: flex;
@@ -39,11 +45,17 @@ body .menu .action {
 }
 body .menu .action div {
   width: 30px;
+  height: 30px;
   margin: 0px 20px;
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
+  font-family: gilroy;
+}
+body .menu .action div.theme {
+  background: url(../assets/moon.svg) center/cover no-repeat;
+  filter: brightness(0.1) invert(1);
 }
 body .landingPage {
   background-color: var(--backcol);
@@ -98,6 +110,8 @@ body .landingPage .card .cardFront {
 }
 body .landingPage .card .cardFront h1 {
   text-transform: uppercase;
+  font-family: gilroy;
+  font-weight: bolder;
   font-size: 3vw;
 }
 body .landingPage .card .cardFront h1.name {
@@ -239,6 +253,10 @@ body .projectPage .projetctPrev {
 body.light {
   --backcol: #f0f0f0;
   --textcol: #3d3d3d;
+}
+body.light .menu .action div.theme {
+  filter: brightness(2.5);
+  background: url(../assets/sun.svg) center/cover no-repeat;
 }
 body.light .landingPage .card .cardFront .texture img {
   filter: invert(1);

@@ -1,4 +1,5 @@
 let projectData;
+var root = document.querySelector(":root");
 
 function getQueryParams() {
   var params = {};
@@ -52,31 +53,49 @@ loadJsonDatas("./data/pageContent.json")
 
 function main(data) {
   var params = getQueryParams();
-
-  if (params.m) {
-    document.querySelector("body").classList.add("light");
+  const body = document.querySelector("body");
+  console.log(params);
+  if (params.m == 1) {
+    body.classList.add("light");
   }
   document.querySelector(".theme").addEventListener("click", () => {
-    document.querySelector("body").classList.toggle("light");
+    if (body.classList.contains("light")) {
+      body.classList.remove("light");
+      sessionStorage.setItem("light", false);
+    } else {
+      body.classList.add("light");
+      sessionStorage.setItem("light", true);
+    }
+  });
+  document.querySelectorAll(".goAcc").forEach((element) => {
+    element.addEventListener("click", () => {
+      window.location.href = "./";
+    });
   });
 
   let pageData = data.projects.filter((element) => {
     return element.id == params.id;
   })[0];
+  let title = document.querySelector("#title");
   let titl = document.querySelector("#titl");
   let type = document.querySelector("#type");
   let year = document.querySelector("#year");
   let tech = document.querySelector("#tech");
   let link = document.querySelector("#link");
   let desc = document.querySelector("#desc");
+  title.innerHTML = pageData.title;
   titl.innerHTML = pageData.title;
   type.innerHTML = pageData.type;
   year.innerHTML = pageData.year;
   tech.innerHTML = pageData.tech;
   link.href = pageData.link;
   desc.innerHTML = pageData.desc;
+  root.style = `
+  --primcol: ${pageData.primcol};
+  --darkcol: ${pageData.darkcol};
+  --secolor: ${pageData.secolor};
+`;
   pageData.detail.forEach((element, index) => {
-    console.log(element);
     const content =
       (element.title
         ? `<div class="paraph"><h3 class="detTitle">${element.title}</h3>`

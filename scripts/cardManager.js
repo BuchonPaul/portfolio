@@ -46,7 +46,3 @@ intercard.addEventListener("mouseenter", () => {
   bounds = intercard.getBoundingClientRect();
   document.addEventListener("mousemove", rotateToMouse);
 });
-
-document.querySelector(".theme").addEventListener("click", () => {
-  document.querySelector("body").classList.toggle("light");
-});

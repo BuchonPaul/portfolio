@@ -19,15 +19,14 @@ body .projectContainer {
   width: 100%;
   display: flex;
   justify-content: center;
-  transition: var(--trans);
-  transition-property: background;
 }
 body .projectContainer .projectBackground {
   position: fixed;
   width: 100vw;
   height: 100vh;
   background: transparent;
-  filter: blur(120px) opacity(0.5);
+  filter: blur(52px) opacity(0.5);
+  transform: scaleY(2) rotate(305deg);
 }
 body .projectContainer .projectBackground svg {
   position: fixed;
@@ -40,22 +39,24 @@ body .projectContainer .projectContent {
   position: absolute;
   z-index: 10;
   width: 100vw;
-  padding: 0 15vh;
+  padding: 0 15vw;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 body .projectContainer .projectContent .topImage {
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   background-color: rgb(93, 93, 93);
   border-radius: 0px 0px 50px 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: var(--textcol);
-  font-size: 5vw;
+  color: var(--primcol);
+  font-size: 2vw;
+  background: url(../assets/project/portal/index.png) center center/cover no-repeat;
+  transition: var(--trans);
 }
 body .projectContainer .projectContent .projectInfo {
   z-index: 20;
@@ -68,21 +69,30 @@ body .projectContainer .projectContent .projectInfo .title {
   margin: 20px 0px 5px 0px;
   border-bottom: 3px solid var(--textcol);
   width: 100%;
-  padding: 15px 0px;
+  padding: 10px 0px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: var(--primcol);
+  transition: var(--trans);
 }
 body .projectContainer .projectContent .projectInfo .detailInfo {
   display: flex;
   padding: 10px 0;
+  font-size: 1.2em;
+  justify-content: space-between;
+  transition: var(--trans);
 }
 body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1vw;
-  width: 30%;
+  width: 40%;
 }
 body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid h3 {
   grid-column: 1;
   text-transform: uppercase;
+  color: var(--primcol);
+  transition: var(--trans);
 }
 body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div {
   grid-column: 2;
@@ -90,6 +100,7 @@ body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div 
 body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div a {
   text-decoration: none;
   color: var(--textcol);
+  transition: var(--trans);
 }
 body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div a:hover {
   text-decoration: underline;
@@ -107,8 +118,7 @@ body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid .row
   grid-row: 4;
 }
 body .projectContainer .projectContent .projectInfo .detailInfo .description {
-  padding: 0 0 0 4vw;
-  width: 70%;
+  width: 50%;
 }
 body .projectContainer .projectContent .projectInfo .detailContainer {
   width: 100%;
@@ -124,7 +134,9 @@ body .projectContainer .projectContent .projectInfo .detailContainer .paraph .de
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 1.7em;
   margin: 20px 0;
+  color: var(--primcol);
 }
 body .projectContainer .projectContent .projectInfo .detailContainer .paraph .detImage {
   aspect-ratio: 16/9;
@@ -132,4 +144,85 @@ body .projectContainer .projectContent .projectInfo .detailContainer .paraph .de
 body .projectContainer .projectContent .projectInfo .detailContainer .paraph .detLegende {
   margin-top: 10px;
   font-style: italic;
+}
+
+body.light {
+  --primcol: var(--darkcol);
+}
+
+@media (max-width: 1440px) {
+  body .menu {
+    background: rgba(175, 175, 175, 0.08) !important;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  body .projectContainer .projectContent {
+    padding: 0 10vw;
+  }
+  body .projectContainer .projectContent .topImage {
+    font-size: 3vw;
+  }
+  body .projectContainer .projectContent .projectInfo .title {
+    font-size: 1em;
+    margin-top: 0px;
+  }
+  body .projectContainer .projectContent .projectInfo .detailInfo {
+    font-size: 1em;
+  }
+  body .projectContainer .projectContent .projectInfo .detailContainer .paraph .detTitle {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 1024px) {
+  body .projectContainer .projectContent .topImage {
+    height: 40vh;
+  }
+  body .projectContainer .projectContent .projectInfo .detailInfo {
+    font-size: 1em;
+    flex-direction: column;
+  }
+  body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid {
+    width: 100%;
+    grid-gap: 1.5vw;
+  }
+  body .projectContainer .projectContent .projectInfo .detailInfo .description {
+    width: 100%;
+    margin-top: 1.5vw;
+  }
+}
+@media (max-width: 768px) {
+  body .projectContainer .projectContent {
+    padding: 0 5vw;
+  }
+  body .projectContainer .projectContent .topImage {
+    margin-top: 100px;
+    border-radius: 2vw;
+  }
+  body .projectContainer .projectContent .projectInfo .title {
+    font-size: 1em;
+    margin-top: 0px;
+  }
+  body .projectContainer .projectContent .projectInfo .detailInfo {
+    font-size: 1.1em;
+  }
+  body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid {
+    grid-gap: 3vw;
+  }
+  body .projectContainer .projectContent .projectInfo .detailInfo .description {
+    margin-top: 3vw;
+  }
+}
+@media (max-width: 400px) {
+  body .projectContainer .projectContent .topImage {
+    margin-top: 100px;
+    border-radius: 2vw;
+  }
+  body .projectContainer .projectContent .projectInfo .title {
+    font-size: 1em;
+    margin-top: 0px;
+  }
+  body .projectContainer .projectContent .projectInfo .detailInfo {
+    font-size: 1.1em;
+  }
 }/*# sourceMappingURL=project.css.map */

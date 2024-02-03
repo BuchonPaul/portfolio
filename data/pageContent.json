@@ -2,7 +2,10 @@
   "projects": [
     {
       "id": 0,
-      "title": "Jeu de dé en 3D",
+      "primcol": "#0ad2f9",
+      "darkcol": "#0a89d4",
+      "secolor": "#ffba0b",
+      "title": "Portal 3D Dice",
       "year": "2023",
       "type": "Design UX/UI Développement Web",
       "tech": "Three JS",

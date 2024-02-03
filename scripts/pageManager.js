@@ -1,8 +1,4 @@
 let projectData;
-function monAction() {
-  console.log("L'action s'exécute !");
-}
-window.addEventListener("pageshow", monAction);
 
 function loadJsonDatas(file) {
   return new Promise((resolve, reject) => {
@@ -45,13 +41,14 @@ const main = (data) => {
   const projList = document.querySelector(".projectList");
   const projetctPrev = document.querySelector(".projetctPrev");
   const projListHeader = document.querySelector(".projectList").innerHTML;
+  const body = document.querySelector("body");
   const animTiming = 1000;
 
   const initProject = (data) => {
     projList.innerHTML = projListHeader;
     data.projects.forEach((project) => {
       projList.innerHTML += `
-          <li class="projectItem" data-url="${project.src}">
+          <li class="projectItem" data-url="${project.src}" id="${project.id}">
               <h3 class="link-item">${project.title}</h3>
               <p class="techno">${project.type}</p>
           </li>
@@ -63,7 +60,11 @@ const main = (data) => {
         projetctPrev.style.background = `url(${project.dataset.url}) center/cover no-repeat`;
       });
       project.addEventListener("click", () => {
-        window.location.href = "./project.html?id=" + project.id + "&m=0";
+        window.location.href =
+          "./project.html?id=" +
+          project.id +
+          "&m=" +
+          (sessionStorage.getItem("light") == "true" ? "1" : "0");
       });
       project.addEventListener("mouseleave", () => {
         projetctPrev.style.background = "0";
@@ -109,4 +110,25 @@ const main = (data) => {
   });
 
   initProject(data);
+  document.querySelector(".theme").addEventListener("click", () => {
+    if (body.classList.contains("light")) {
+      document.querySelector("body").classList.remove("light");
+      sessionStorage.setItem("light", false);
+    } else {
+      document.querySelector("body").classList.add("light");
+      sessionStorage.setItem("light", true);
+    }
+  });
 };
+
+function onPageLoad() {
+  const body = document.querySelector("body");
+
+  if (sessionStorage.getItem("light") == "true") {
+    document.querySelector("body").classList.add("light");
+  } else {
+    document.querySelector("body").classList.remove("light");
+    sessionStorage.setItem("light", false);
+  }
+}
+window.addEventListener("pageshow", onPageLoad);

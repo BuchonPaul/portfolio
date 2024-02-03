@@ -8,6 +8,9 @@
     <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="style/project.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,16 +18,16 @@
         <div class="logo goAcc"></div>
         <div class="action">
             <div class="lang">FR</div>
-            <div class="theme">☼</div>
-            <div class="detail">☰</div>
+            <div class="theme"></div>
+            <!-- <div class="detail">☰</div> -->
         </div>
     </div>
     <div class="projectContainer">
         <div class="projectBackground">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 288 288">
                 <linearGradient id="PSgrad_0" x1="70.711%" x2="0%" y1="70.711%" y2="0%">
-                    <stop offset="0%" stop-color="rgb(95,54,152)" stop-opacity="1" />
-                    <stop offset="100%" stop-color="rgb(247,109,138)" stop-opacity="1" />
+                    <stop offset="0%" stop-color="var(--secolor)" stop-opacity="1" />
+                    <stop offset="100%" stop-color="var(--secolor)" stop-opacity="1" />
                 </linearGradient>
                 <path fill="url(#PSgrad_0)">
                     <animate repeatCount="indefinite" attributeName="d" dur="5s"
@@ -33,7 +36,7 @@
             </svg>
         </div>
         <div class="projectContent">
-            <div class="topImage">TITLE</div>
+            <div class="topImage"><h1 id="title">TITLE</h1></div>
             
             <div class="projectInfo">
                 <div class="title">
