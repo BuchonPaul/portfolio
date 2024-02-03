@@ -3,14 +3,32 @@
     {
       "id": 0,
       "title": "Jeu de dé en 3D",
-      "type": "Three JS",
-      "src": "./assets/project/portal/index.png"
+      "year": "2023",
+      "type": "Design UX/UI Développement Web",
+      "tech": "Three JS",
+      "link": "https://3dice-paul-poloches-projects.vercel.app/",
+      "desc": "On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut.",
+      "src": "./assets/project/portal/index.png",
+      "detail": [
+        {
+          "title": "Projet",
+          "src": "./assets/project/portal/index.png",
+          "leg": "Petite description de l'image sans plus de détail"
+        },
+        {
+          "src": "./assets/project/portal/index.png"
+        },
+        {
+          "src": "./assets/project/portal/index.png"
+        }
+      ]
     },
     {
       "id": 1,
       "title": "Windows XP React",
       "type": "React/G6",
-      "src": "./assets/project/winxp/index.png"
+      "src": "./assets/project/winxp/index.png",
+      "link": "https://winxpreact.vercel.app/"
     }
   ]
 }

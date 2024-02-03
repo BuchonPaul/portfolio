@@ -235,26 +235,6 @@ body .projectPage .projetctPrev {
   opacity: 0;
   transition: 1s;
 }
-body .link-item {
-  position: relative;
-}
-body .link-item::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  padding-top: 2px;
-  border-radius: 4px;
-  background-color: var(--textcol);
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-body .link-item:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-}
 
 body.light {
   --backcol: #f0f0f0;
@@ -274,4 +254,25 @@ body.light .landingPage .cardReflection {
 body.light .projectPage {
   -webkit-backdrop-filter: blur(25px) brightness(1);
           backdrop-filter: blur(25px) brightness(1);
+}
+
+.link-item {
+  position: relative;
+}
+.link-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  padding-top: 2px;
+  border-radius: 4px;
+  background-color: var(--textcol);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.link-item:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }/*# sourceMappingURL=style.css.map */

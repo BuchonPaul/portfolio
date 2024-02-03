@@ -229,32 +229,37 @@ body {
                     border-bottom: solid 1px var(--textcol);
                     padding: 15px 0px;
                     cursor: pointer;
-                    &.projectItem{
+
+                    &.projectItem {
                         opacity: 0;
 
                         transform: translateY(20px);
                         transition: opacity 0.3s, transform 0.3s;
+
                         &.appear {
-                        opacity: 1;
-                        transform: translateY(0);
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
                     }
-                    }
-                    
+
                     &.listTitle {
                         display: flex;
                         justify-content: space-between;
                         align-items: flex-end;
                     }
-                    h1{
+
+                    h1 {
                         font-size: 3vw;
                     }
-                    h3{
+
+                    h3 {
                         font-size: 1.5vw;
                     }
-                    p{
+
+                    p {
                         font-size: 1.3vw;
                     }
-                    
+
                 }
             }
         }
@@ -268,29 +273,6 @@ body {
             background: url('') center/cover no-repeat;
             opacity: 0;
             transition: 1s;
-        }
-    }
-    
-    .link-item {
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            padding-top: 2px;
-            border-radius: 4px;
-            background-color: var(--textcol);
-            bottom: 0;
-            left: 0;
-            transform-origin: right;
-            transform: scaleX(0);
-            transition: transform .3s ease-in-out;
-        }
-
-        &:hover::before {
-            transform-origin: left;
-            transform: scaleX(1);
         }
     }
 }
@@ -321,7 +303,31 @@ body.light {
         }
 
     }
+
     .projectPage {
         backdrop-filter: blur(25px) brightness(1);
+    }
+}
+
+.link-item {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        padding-top: 2px;
+        border-radius: 4px;
+        background-color: var(--textcol);
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+    }
+
+    &:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
     }
 }

@@ -1,4 +1,9 @@
 let projectData;
+function monAction() {
+  console.log("L'action s'exécute !");
+}
+window.addEventListener("pageshow", monAction);
+
 function loadJsonDatas(file) {
   return new Promise((resolve, reject) => {
     if (projectData) {
@@ -58,8 +63,7 @@ const main = (data) => {
         projetctPrev.style.background = `url(${project.dataset.url}) center/cover no-repeat`;
       });
       project.addEventListener("click", () => {
-        console.log("clic");
-        window.location.href = "./project.html";
+        window.location.href = "./project.html?id=" + project.id + "&m=0";
       });
       project.addEventListener("mouseleave", () => {
         projetctPrev.style.background = "0";
