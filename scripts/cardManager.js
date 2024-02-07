@@ -1,6 +1,5 @@
 const intercard = document.querySelector(".landingPage");
 let bounds;
-var root = document.querySelector(":root");
 
 function rotateToMouse(e) {
   const mouseX = e.clientX;
@@ -39,10 +38,12 @@ function rotateToMouse(e) {
         --o:${Math.log(distance) / 5};
         --ah: -${foil_x}%;
         --al: -${foil_y}%;
+        --mx: ${e.pageX}px;
+        --my: ${e.pageY}px;
    `;
 }
 
-intercard.addEventListener("mouseenter", () => {
-  bounds = intercard.getBoundingClientRect();
-  document.addEventListener("mousemove", rotateToMouse);
-});
+// intercard.addEventListener("mouseenter", () => {
+bounds = intercard.getBoundingClientRect();
+document.addEventListener("mousemove", rotateToMouse);
+// });

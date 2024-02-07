@@ -2,11 +2,17 @@
   --o: 0.5;
   --r: -45deg;
   --trans: 0.5s;
+  --mx:100px;
+  --my:100px;
 }
 
 @font-face {
   font-family: gilroy;
   src: url(../assets/font/Gilroy-Regular.woff2);
+}
+@font-face {
+  font-family: gilroyBold;
+  src: url(../assets/font/Gilroy-Extrabold.woff2);
 }
 * {
   margin: 0;
@@ -18,9 +24,23 @@
 body {
   display: flex;
   justify-content: center;
-  --backcol: #131313;
+  --backcol: #0e0e0e;
   --textcol: #d8d8d8;
+  overflow: hidden;
   transition: var(--trans);
+}
+body div.ball {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: invert(80%);
+          backdrop-filter: invert(80%);
+  z-index: 1000;
 }
 body .menu {
   width: 95vw;
@@ -57,6 +77,20 @@ body .menu .action div.theme {
   background: url(../assets/moon.svg) center/cover no-repeat;
   filter: brightness(0.1) invert(1);
 }
+body .grainy {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  mask-image: url(.././assets/landing/grain.png);
+  mask-size: 38%;
+  -webkit-mask-image: url(.././assets/landing/grain.png);
+  mask-image: url(.././assets/landing/grain.png);
+  -webkit-mask-size: 38%;
+  mask-size: 38%;
+  mask-size: 38%;
+  background: radial-gradient(circle at var(--mx) var(--my), rgb(167, 167, 167) 2vw, #1e1e1e 10vw);
+  mix-blend-mode: color-dodge;
+}
 body .landingPage {
   background-color: var(--backcol);
   height: 100vh;
@@ -78,14 +112,16 @@ body .landingPage .card .cardBackgroundGlow {
   right: 0%;
   bottom: 0%;
   border-radius: 1vw;
-  background-image: linear-gradient(29deg, transparent 37%, rgba(42, 99, 255, 0.93)), linear-gradient(135deg, #28eeac, #f3f177 41%, #fd6d38 71%, #a48eb6);
+  background-color: #ff99f7;
+  background-image: radial-gradient(at 92% 52%, hsl(7, 93%, 68%) 0px, transparent 50%), radial-gradient(at 26% 99%, hsl(305, 95%, 67%) 0px, transparent 50%), radial-gradient(at 96% 76%, hsl(311, 90%, 79%) 0px, transparent 50%), radial-gradient(at 97% 23%, hsl(34, 93%, 63%) 0px, transparent 50%), radial-gradient(at 85% 75%, hsl(226, 61%, 73%) 0px, transparent 50%), radial-gradient(at 50% 80%, hsl(315, 77%, 77%) 0px, transparent 50%), radial-gradient(at 22% 45%, hsl(223, 81%, 64%) 0px, transparent 50%);
   opacity: 0.3;
   filter: blur(3.5vw);
   -webkit-filter: blur(3.5vw);
 }
 body .landingPage .card .cardBackground {
   z-index: 100;
-  background-image: linear-gradient(29deg, transparent 37%, rgba(42, 99, 255, 0.93)), linear-gradient(135deg, #28eeac, #f3f177 41%, #fd6d38 71%, #a48eb6);
+  background-color: #ff99f7;
+  background-image: radial-gradient(at 92% 52%, hsl(7, 93%, 68%) 0px, transparent 50%), radial-gradient(at 26% 99%, hsl(305, 95%, 67%) 0px, transparent 50%), radial-gradient(at 96% 76%, hsl(311, 90%, 79%) 0px, transparent 50%), radial-gradient(at 97% 23%, hsl(34, 93%, 63%) 0px, transparent 50%), radial-gradient(at 85% 75%, hsl(226, 61%, 73%) 0px, transparent 50%), radial-gradient(at 50% 80%, hsl(315, 77%, 77%) 0px, transparent 50%), radial-gradient(at 22% 45%, hsl(223, 81%, 64%) 0px, transparent 50%);
   width: 61vw;
   aspect-ratio: 1.68;
   border-radius: 1vw;
@@ -119,6 +155,7 @@ body .landingPage .card .cardFront h1.name {
 }
 body .landingPage .card .cardFront h1.title {
   margin-bottom: 1vw;
+  font-family: gilroyBold;
 }
 body .landingPage .card .cardFront .subtitle {
   font-size: 1.5vw;
@@ -148,14 +185,15 @@ body .landingPage .card .cardFront .texture img {
 body .landingPage .card .cardFront#foiled {
   z-index: 1000;
 }
-body .landingPage .card .cardFront#unfoiled {
-  z-index: 1100;
-  background-color: transparent !important;
+body .landingPage .card .cardFront#foiled.flip {
+  transform: rotateY("160deg");
+  transition: var(--trans);
 }
 body .landingPage .holo {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(110.35% 80.79% at 6% 103.92%, rgb(37, 169, 239) 0%, rgba(37, 169, 239, 0) 100%), linear-gradient(169.3deg, rgb(205, 249, 232) 15%, rgba(205, 249, 232, 0) 46%), radial-gradient(123% 73% at 107% 96%, rgb(255, 253, 177) 20%, rgb(254, 228, 191) 60%, rgb(240, 189, 208) 75%, rgba(255, 129, 38, 0) 100%), linear-gradient(0deg, rgb(0, 204, 204) 0%, rgb(0, 204, 194) 100%);
+  background: radial-gradient(50% 123.47% at 50% 50%, #00FF94 0%, #FF00C7 100%), linear-gradient(121.28deg, #213100 0%, #FF0000 100%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), linear-gradient(114.9deg, #00C6A2 0%, #6A45A8 100%), radial-gradient(100% 148.07% at 0% 0%, #FFFFFF 0%, #1DCD00 100%);
+  background-blend-mode: screen, color-dodge, overlay, difference, normal;
   background-size: 120vw 120vh;
   background-position: var(--h) var(--l);
   -webkit-mask-image: url(".././assets/landing/foil.png");
@@ -163,7 +201,7 @@ body .landingPage .holo {
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
   mix-blend-mode: darken;
-  filter: brightness(0.9) contrast(0.8) saturate(1);
+  filter: brightness(1) contrast(1) saturate(1);
   opacity: var(--o);
   pointer-events: none;
 }

@@ -178,9 +178,13 @@ body {
 }
 body.light {
     --primcol: var(--darkcol);
+    .menu{
+        background: rgb(253 253 253 / 72%) !important;
+    }
 }
 @media (max-width: 1440px) {
     body {
+        
         .menu {
             background: rgb(175 175 175 / 8%) !important;
             border-radius: 10px;

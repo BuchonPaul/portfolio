@@ -1,33 +1,3 @@
-let projectData;
-
-function loadJsonDatas(file) {
-  return new Promise((resolve, reject) => {
-    if (projectData) {
-      // Si les données sont déjà chargées, résolvez immédiatement la promesse.
-      resolve(JSON.parse(projectData));
-    } else {
-      var rawFile = new XMLHttpRequest();
-      rawFile.overrideMimeType("application/json");
-      rawFile.open("GET", file, true);
-      rawFile.onreadystatechange = function () {
-        if (rawFile.readyState === 4) {
-          if (rawFile.status == "200") {
-            projectData = rawFile.responseText;
-            resolve(JSON.parse(projectData));
-          } else {
-            reject(
-              new Error(
-                `Erreur de chargement des données JSON. Statut ${rawFile.status}`
-              )
-            );
-          }
-        }
-      };
-      rawFile.send(null);
-    }
-  });
-}
-
 loadJsonDatas("./data/pageContent.json")
   .then((data) => {
     main(data);
@@ -41,7 +11,6 @@ const main = (data) => {
   const projList = document.querySelector(".projectList");
   const projetctPrev = document.querySelector(".projetctPrev");
   const projListHeader = document.querySelector(".projectList").innerHTML;
-  const body = document.querySelector("body");
   const animTiming = 1000;
 
   const initProject = (data) => {
@@ -110,24 +79,13 @@ const main = (data) => {
   });
 
   initProject(data);
-  document.querySelector(".theme").addEventListener("click", () => {
-    if (body.classList.contains("light")) {
-      document.querySelector("body").classList.remove("light");
-      sessionStorage.setItem("light", false);
-    } else {
-      document.querySelector("body").classList.add("light");
-      sessionStorage.setItem("light", true);
-    }
-  });
 };
 
 function onPageLoad() {
-  const body = document.querySelector("body");
-
   if (sessionStorage.getItem("light") == "true") {
-    document.querySelector("body").classList.add("light");
+    body.classList.add("light");
   } else {
-    document.querySelector("body").classList.remove("light");
+    body.classList.remove("light");
     sessionStorage.setItem("light", false);
   }
 }

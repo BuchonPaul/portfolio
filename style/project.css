@@ -149,6 +149,9 @@ body .projectContainer .projectContent .projectInfo .detailContainer .paraph .de
 body.light {
   --primcol: var(--darkcol);
 }
+body.light .menu {
+  background: rgba(253, 253, 253, 0.72) !important;
+}
 
 @media (max-width: 1440px) {
   body .menu {
