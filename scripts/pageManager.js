@@ -8,9 +8,9 @@ loadJsonDatas("./data/pageContent.json")
 
 const main = (data) => {
   const projPage = document.querySelector(".projectPage");
-  const projList = document.querySelector(".projectList");
+  const projList = document.querySelector(".projectList ul");
   const projetctPrev = document.querySelector(".projetctPrev");
-  const projListHeader = document.querySelector(".projectList").innerHTML;
+  const projListHeader = projList.innerHTML;
   const animTiming = 1000;
 
   const initProject = (data) => {
@@ -19,7 +19,7 @@ const main = (data) => {
       projList.innerHTML += `
           <li class="projectItem" data-url="${project.src}" id="${project.id}">
               <h3 class="link-item">${project.title}</h3>
-              <p class="techno">${project.type}</p>
+              <p class="techno">${project.year}</p>
           </li>
         `;
     });
@@ -36,7 +36,7 @@ const main = (data) => {
           (sessionStorage.getItem("light") == "true" ? "1" : "0");
       });
       project.addEventListener("mouseleave", () => {
-        projetctPrev.style.background = "0";
+        projetctPrev.style.opacity = "0";
         projetctPrev.style.background = `url('') center/cover no-repeat`;
       });
     });
@@ -50,6 +50,8 @@ const main = (data) => {
       }, 1);
       setTimeout(() => {
         document.querySelectorAll(".projectItem").forEach((item, index) => {
+          item.style.display = "flex";
+
           setTimeout(() => {
             item.classList.add("appear");
           }, index * 200);
@@ -64,6 +66,7 @@ const main = (data) => {
       projPage.style.display = "none";
     }, animTiming);
     document.querySelectorAll(".projectItem").forEach((item, index) => {
+      item.style.display = "none";
       item.classList.remove("appear");
     });
   };

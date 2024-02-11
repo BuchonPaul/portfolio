@@ -30,6 +30,39 @@
       "id": 1,
       "title": "Windows XP React",
       "type": "React/G6",
+      "year": "2022",
+      "src": "./assets/project/winxp/index.png",
+      "link": "https://winxpreact.vercel.app/"
+    },
+    {
+      "id": 2,
+      "title": "Windows XP React",
+      "type": "React/G6",
+      "year": "2022",
+      "src": "./assets/project/winxp/index.png",
+      "link": "https://winxpreact.vercel.app/"
+    },
+    {
+      "id": 3,
+      "title": "Windows XP React",
+      "type": "React/G6",
+      "year": "2022",
+      "src": "./assets/project/winxp/index.png",
+      "link": "https://winxpreact.vercel.app/"
+    },
+    {
+      "id": 4,
+      "title": "Windows XP React",
+      "type": "React/G6",
+      "year": "2022",
+      "src": "./assets/project/winxp/index.png",
+      "link": "https://winxpreact.vercel.app/"
+    },
+    {
+      "id": 5,
+      "title": "Windows XP React",
+      "type": "React/G6",
+      "year": "2022",
       "src": "./assets/project/winxp/index.png",
       "link": "https://winxpreact.vercel.app/"
     }

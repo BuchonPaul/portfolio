@@ -2,8 +2,8 @@
   --o: 0.5;
   --r: -45deg;
   --trans: 0.5s;
-  --mx:100px;
-  --my:100px;
+  --mx: 100px;
+  --my: 100px;
 }
 
 @font-face {
@@ -81,13 +81,10 @@ body .grainy {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  mask-image: url(.././assets/landing/grain.png);
-  mask-size: 38%;
   -webkit-mask-image: url(.././assets/landing/grain.png);
-  mask-image: url(.././assets/landing/grain.png);
+          mask-image: url(.././assets/landing/grain.png);
   -webkit-mask-size: 38%;
-  mask-size: 38%;
-  mask-size: 38%;
+          mask-size: 38%;
   background: radial-gradient(circle at var(--mx) var(--my), rgb(167, 167, 167) 2vw, #1e1e1e 10vw);
   mix-blend-mode: color-dodge;
 }
@@ -156,10 +153,6 @@ body .landingPage .card .cardFront h1.name {
 body .landingPage .card .cardFront h1.title {
   margin-bottom: 1vw;
   font-family: gilroyBold;
-}
-body .landingPage .card .cardFront .subtitle {
-  font-size: 1.5vw;
-  margin-bottom: 1vw;
 }
 body .landingPage .card .cardFront .links {
   font-size: 1.5vw;
@@ -233,59 +226,83 @@ body .projectPage {
   transition-property: backdrop-filter, opacity;
   transition-property: backdrop-filter, opacity, -webkit-backdrop-filter;
   color: var(--textcol);
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3vw;
+  padding-top: 78px;
 }
 body .projectPage .projectContainer {
-  position: absolute;
-  bottom: 0px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
   height: 80vh;
+  padding-top: 2vw;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-body .projectPage .projectContainer ul {
-  width: 30vw;
+body .projectPage .projectContainer::-webkit-scrollbar {
+  display: none;
 }
-body .projectPage .projectContainer ul li {
+body .projectPage .projectContainer .projectList {
+  width: 28vw;
+}
+body .projectPage .projectContainer .projectList h1 {
+  font-size: 3vw;
+  font-family: gilroyBold;
+}
+body .projectPage .projectContainer .projectList li {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: end;
-  border-bottom: solid 1px var(--textcol);
-  padding: 15px 0px;
   cursor: pointer;
+  padding: 2.7vh 0;
 }
-body .projectPage .projectContainer ul li.projectItem {
+body .projectPage .projectContainer .projectList li.projectItem {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.3s, transform 0.3s;
+  display: none;
 }
-body .projectPage .projectContainer ul li.projectItem.appear {
+body .projectPage .projectContainer .projectList li.projectItem.appear {
   opacity: 1;
   transform: translateY(0);
 }
-body .projectPage .projectContainer ul li.listTitle {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-body .projectPage .projectContainer ul li h1 {
-  font-size: 3vw;
-}
-body .projectPage .projectContainer ul li h3 {
+body .projectPage .projectContainer .projectList li h3 {
   font-size: 1.5vw;
+  font-family: "gilroyBold";
 }
-body .projectPage .projectContainer ul li p {
+body .projectPage .projectContainer .projectList li p {
   font-size: 1.3vw;
+  font-family: "gilroy";
 }
-body .projectPage .projetctPrev {
-  width: 50vw;
+body .projectPage .projectContainer .projetctPrev {
+  width: 60vw;
   height: 100%;
-  border-radius: 25px 0px 0px 0px;
-  background-color: transparent;
-  margin-left: 10vw;
+  border-radius: 15px 0px 0px 15px;
+  margin: 0 1vw;
   background: url("") center/cover no-repeat;
   opacity: 0;
-  transition: 1s;
+}
+body .projectPage .projectDecoration {
+  margin-top: 1vw;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  opacity: 0.5;
+  font-size: 1em;
+  padding: 0 1vw;
+}
+body .projectPage .projectYear {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  right: 2vw;
+  opacity: 0.5;
+  font-size: 1em;
 }
 
 body.light {
@@ -331,4 +348,37 @@ body.light .projectPage {
 .link-item:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+@media (min-width: 1440px) {
+  .projectPage .projectDecoration {
+    font-size: 1.7em !important;
+  }
+  .projectPage .projectYear {
+    font-size: 1.7em !important;
+  }
+}
+@media (max-width: 900px) {
+  .projectPage .projectList {
+    width: 100% !important;
+    padding: 5%;
+    padding-top: 0px;
+  }
+  .projectPage .projectList h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 7vw !important;
+  }
+  .projectPage .projectList li {
+    padding: 2.7vh 0px;
+  }
+  .projectPage .projectList li h3 {
+    font-size: 3.5vw !important;
+  }
+  .projectPage .projectList li p {
+    font-size: 2.5vw !important;
+  }
+  .projectPage .projetctPrev {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
