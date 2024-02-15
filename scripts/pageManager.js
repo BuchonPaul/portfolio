@@ -75,6 +75,19 @@ const main = (data) => {
     showProject(element);
   });
 
+  document.querySelector(".showAbout").addEventListener("click", (e) => {
+    isFliped = !isFliped;
+    isFliping = true;
+    const saveTrans = cardFront.style.transition;
+    cardFront.style.transition = `transform ${transDuration}ms`;
+    rotateToMouse(e);
+    setTimeout(() => {
+      cardFront.style.transition = saveTrans;
+      isFliping = false;
+      rotateToMouse();
+    }, transDuration);
+  });
+
   document.querySelectorAll(".goAcc").forEach((element) => {
     element.addEventListener("click", () => {
       hideProject();

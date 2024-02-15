@@ -1,9 +1,8 @@
 const intercard = document.querySelector(".landingPage");
-let bounds;
+const cardFront = document.querySelector(".cardFront");
+const bounds = intercard.getBoundingClientRect();
 
-function rotateToMouse(e) {
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
+function rotateToMouse() {
   const leftX = mouseX - bounds.x;
   const topY = mouseY - bounds.y;
   const center = {
@@ -11,8 +10,8 @@ function rotateToMouse(e) {
     y: topY - bounds.height / 2,
   };
   const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
-  document.querySelectorAll(".cardFront").forEach((card) => {
-    card.style.transform = `
+
+  cardFront.style.transform = `
     scale3d(1,1,1)
 
     rotate3d(
@@ -21,8 +20,9 @@ function rotateToMouse(e) {
       0,
       ${Math.log(distance) * 2}deg
     )
+    ${isFliped ? "rotateY(180deg)" : ""}
   `;
-  });
+
   document.querySelector(".cardBackgroundGlow").style.transform = `
     translate3d(
       ${center.x / 400}vw,
@@ -30,20 +30,21 @@ function rotateToMouse(e) {
       0
     )
   `;
+
   let foil_y = ((window.innerWidth / 2 - center.x) * 100) / window.innerWidth;
   let foil_x = ((window.innerHeight / 2 - center.y) * 100) / window.innerHeight;
+
   root.style = `
         --h: ${foil_x}%;
         --l: ${foil_y}%;
         --o:${Math.log(distance) / 5};
         --ah: -${foil_x}%;
         --al: -${foil_y}%;
-        --mx: ${e.pageX}px;
-        --my: ${e.pageY}px;
+        --mx: ${mouseX}px;
+        --my: ${mouseY}px;
    `;
+  if (!isFliping) {
+    requestAnimationFrame(rotateToMouse);
+  }
 }
-
-// intercard.addEventListener("mouseenter", () => {
-bounds = intercard.getBoundingClientRect();
-document.addEventListener("mousemove", rotateToMouse);
-// });
+rotateToMouse();

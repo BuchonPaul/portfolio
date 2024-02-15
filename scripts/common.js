@@ -1,6 +1,8 @@
 const root = document.querySelector(":root");
 const body = document.querySelector("body");
-
+const transDuration = 500;
+let isFliped = false;
+let isFliping = false;
 let projectData;
 
 function loadJsonDatas(file) {
@@ -62,6 +64,7 @@ let mouseY = 0;
 let ballX = 0;
 let ballY = 0;
 let speed = 0.3;
+
 function animate() {
   let distX = mouseX - ballX;
   let distY = mouseY - ballY;
@@ -74,6 +77,7 @@ function animate() {
 
   requestAnimationFrame(animate);
 }
+
 animate();
 
 document.addEventListener("mousemove", function (event) {
