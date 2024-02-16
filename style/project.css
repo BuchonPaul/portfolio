@@ -46,7 +46,6 @@ body .projectContainer .projectContent {
 body .projectContainer .projectContent .topImage {
   width: 100%;
   height: 50vh;
-  background-color: rgb(93, 93, 93);
   border-radius: 0px 0px 50px 50px;
   display: flex;
   align-items: center;
@@ -54,7 +53,6 @@ body .projectContainer .projectContent .topImage {
   font-weight: bold;
   color: var(--primcol);
   font-size: 2vw;
-  background: url(../assets/project/portal/index.png) center center/cover no-repeat;
   transition: var(--trans);
 }
 body .projectContainer .projectContent .projectInfo {

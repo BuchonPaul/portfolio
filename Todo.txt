@@ -17,16 +17,26 @@
     -About
 
 -Rédaction des contenus:
-    - WinXP
-    - Koust
-    - Portfolio V2 
-    - Portfolio V1  
-    - Three JS
-    - Blender
-    - Affinity
+    - WinXP❌
+    - Koust❌
+    - Portfolio V2 ❌
+    - Three JS❌
+    - Blender❌
+    - Affinity❌
 
--Prendre des images
--Traduire des contenus
+
+
+- Prendre des images
+- Optimiser les Contenus
+- Gestion des langues
+- Traduire des contenus
+- Structure page Accueil
+-PAge Projet
+    -BKG
+    -Projet Suivant
+- Page About
+- Transi
+- Mouse Intercat Call To Action
 
 
 

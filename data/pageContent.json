@@ -11,7 +11,7 @@
       "tech": "Three JS",
       "link": "https://3dice-paul-poloches-projects.vercel.app/",
       "desc": "On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut.",
-      "src": "./assets/project/portal/index.png",
+      "src": "./assets/project/portal/portalshot2.jpg",
       "detail": [
         {
           "title": "Projet",
@@ -31,12 +31,12 @@
       "title": "Windows XP React",
       "type": "React/G6",
       "year": "2022",
-      "src": "./assets/project/winxp/index.png",
+      "src": "./assets/project/winxp/shot.jpg",
       "link": "https://winxpreact.vercel.app/"
     },
     {
       "id": 2,
-      "title": "Windows XP React",
+      "title": "Koust",
       "type": "React/G6",
       "year": "2022",
       "src": "./assets/project/winxp/index.png",
@@ -44,7 +44,7 @@
     },
     {
       "id": 3,
-      "title": "Windows XP React",
+      "title": "Portfolio V2",
       "type": "React/G6",
       "year": "2022",
       "src": "./assets/project/winxp/index.png",
@@ -52,7 +52,7 @@
     },
     {
       "id": 4,
-      "title": "Windows XP React",
+      "title": "Jeu de Dé Three JS",
       "type": "React/G6",
       "year": "2022",
       "src": "./assets/project/winxp/index.png",
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "title": "Windows XP React",
+      "title": "Productions Graphiques",
       "type": "React/G6",
       "year": "2022",
       "src": "./assets/project/winxp/index.png",
