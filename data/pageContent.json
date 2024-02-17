@@ -2,6 +2,19 @@
   "projects": [
     {
       "id": 0,
+      "title": "WindowsXP React/AntVG6",
+      "year": "2023",
+      "type": "Développement FullStack / Design UX-UI",
+      "tech": "React / AntvJS / TipTap / Websocket",
+      "src": "./assets/project/winxp/shot.jpg",
+      "link": "https://winxpreact.vercel.app/",
+      "desc": "Dans le cadre de la réalisation mon premier gros projet React, j’ai développé une interface reprenant celle de Windows XP. Le projet propose les “applications”: Bloc Note, Word, Internet Explorer et la Corbeille.<br>L’idée de ce projet est de proposer une interface de travail sur navigateur, couplé à une IA générative.<br>Le projet permet un système de “multi-task” et de gestion de bureau. L’architecture de cette interface est développée avec React. Le système de bureau est gérer avec la bibliothèque de gestion de graph AntVG6. L’éditeur de texte riche, quant à lui est développé grâce à TipTap.<br>En ce qui concerne Internet Explorer les recherches s’envoie à un serveur Express JS avec WebSockets, ce serveur traite les requêtes et renvoie en direct les réponses d’un modèle de langage hébergé sur le serveur.",
+      "primcol": "#0ad2f9",
+      "darkcol": "#0a89d4",
+      "secolor": "#3ddd70"
+    },
+    {
+      "id": 1,
       "primcol": "#0ad2f9",
       "darkcol": "#0a89d4",
       "secolor": "#ffba0b",
@@ -25,14 +38,6 @@
           "src": "./assets/project/portal/index.png"
         }
       ]
-    },
-    {
-      "id": 1,
-      "title": "Windows XP React",
-      "type": "React/G6",
-      "year": "2022",
-      "src": "./assets/project/winxp/shot.jpg",
-      "link": "https://winxpreact.vercel.app/"
     },
     {
       "id": 2,

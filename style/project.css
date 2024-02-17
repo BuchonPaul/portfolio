@@ -83,7 +83,7 @@ body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1vw;
-  width: 40%;
+  width: 35%;
 }
 body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid h3 {
   grid-column: 1;
@@ -115,7 +115,7 @@ body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid .row
   grid-row: 4;
 }
 body .projectContainer .projectContent .projectInfo .detailInfo .description {
-  width: 50%;
+  width: 60%;
 }
 body .projectContainer .projectContent .projectInfo .detailContainer {
   width: 100%;

@@ -32,7 +32,7 @@ function main(data) {
   let topImage = document.querySelector(".topImage");
   console.log(`url(${pageData.url}) center/cover no-repeat`);
   topImage.style.background = `url(${pageData.src}) center/cover no-repeat`;
-  title.innerHTML = pageData.title;
+  // title.innerHTML = pageData.title;
   titl.innerHTML = pageData.title;
   type.innerHTML = pageData.type;
   year.innerHTML = pageData.year;

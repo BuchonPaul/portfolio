@@ -61,20 +61,12 @@ document.querySelector(".theme").addEventListener("click", () => {
 const ball = document.querySelector("div.ball");
 let mouseX = 0;
 let mouseY = 0;
-let ballX = 0;
-let ballY = 0;
-let speed = 0.3;
 
 function animate() {
-  let distX = mouseX - ballX;
-  let distY = mouseY - ballY;
-
-  ballX = ballX + distX * speed;
-  ballY = ballY + distY * speed;
-
-  ball.style.left = ballX + "px";
-  ball.style.top = ballY + "px";
-
+  root.style = `
+    --mx: ${mouseX}px;
+    --my: ${mouseY}px;
+   `;
   requestAnimationFrame(animate);
 }
 

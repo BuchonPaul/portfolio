@@ -2,8 +2,6 @@
     --o: 0.5;
     --r: -45deg;
     --trans: 0.5s;
-    --mx: 100px;
-    --my: 100px;
 }
 
 @font-face {
@@ -37,8 +35,8 @@ body {
         border-radius: 50%;
         pointer-events: none;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: var(--my);
+        left: var(--mx);
         transform: translate(-50%, -50%);
         backdrop-filter: invert(80%);
         z-index: 1000;
@@ -91,7 +89,7 @@ body {
         height: 100vh;
         width: 100vw;
         mask-image: url(.././assets/landing/grain.png);
-        mask-size: 38%;
+        mask-size: 9%;
         background: radial-gradient(circle at var(--mx) var(--my), rgb(167, 167, 167) 2vw, #1e1e1e 10vw);
         mix-blend-mode: color-dodge;
     }
@@ -183,12 +181,27 @@ body {
                     }
                 }
 
+                h2 {
+                    font-size: 1.2vw;
+                    border-left: 0.3vw solid var(--textcol);
+                    padding-left: 1vw;
+                    border-radius: 0.1vw;
+                    width: 75%;
+                }
+
                 .links {
                     font-size: 1.5vw;
                     width: 25vw;
                     display: flex;
                     justify-content: space-between;
                     margin-top: 3vw;
+                    flex-direction: column;
+
+                    a {
+                        font-family: "gilroy";
+                        padding-bottom: 1vw;
+                        width: fit-content;
+                    }
                 }
 
                 .texture {
@@ -203,7 +216,7 @@ body {
                     img {
                         transition: var(--trans);
                         height: 100%;
-                        width: auto;
+                        width: 100%;
                     }
                 }
 
@@ -226,7 +239,7 @@ body {
             background-size: 120vw 120vh;
             background-position: var(--h) var(--l);
             mask-image: url(".././assets/landing/foil.png");
-            mask-size: 100% 100%;
+            mask-size: 25% 100%;
             mix-blend-mode: darken;
             filter: brightness(1) contrast(1) saturate(1);
             opacity: var(--o);
@@ -293,6 +306,7 @@ body {
                     align-items: end;
                     cursor: pointer;
                     padding: 2.7vh 0;
+
                     &.projectItem {
                         opacity: 0;
                         transform: translateY(20px);
@@ -336,7 +350,7 @@ body {
             opacity: 0.5;
             font-size: 1em;
             padding: 0 1vw;
-       }
+        }
 
         .projectYear {
             display: flex;
@@ -429,7 +443,7 @@ body.light {
         }
     }
 }
-    
+
 @media (max-width: 900px) {
     .projectPage {
         .projectList {
@@ -443,21 +457,42 @@ body.light {
                 font-size: 7vw !important;
             }
 
-                li {
-                    padding: 2.7vh 0px;
+            li {
+                padding: 2.7vh 0px;
 
-                    h3 {
-                        font-size: 3.5vw !important;
-                    }
-
-                    p {
-                        font-size: 2.5vw !important;
-                    }
+                h3 {
+                    font-size: 3.5vw !important;
                 }
-                
+
+                p {
+                    font-size: 2.5vw !important;
+                }
+            }
+
         }
+
         .projetctPrev {
             display: none;
         }
     }
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .cardBackground {
+        width: 90vw !important;
+    }   
+
+    h1 {
+        font-size: 3vh !important;
+    }
+
+    h2 {
+        font-weight: unset !important;
+        font-size: 1.4vh !important;
+    }
+
+    a {       
+         font-size: 1.4vh !important;
+    }
+
 }

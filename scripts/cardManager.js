@@ -40,8 +40,7 @@ function rotateToMouse() {
         --o:${Math.log(distance) / 5};
         --ah: -${foil_x}%;
         --al: -${foil_y}%;
-        --mx: ${mouseX}px;
-        --my: ${mouseY}px;
+
    `;
   if (!isFliping) {
     requestAnimationFrame(rotateToMouse);

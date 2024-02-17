@@ -2,8 +2,6 @@
   --o: 0.5;
   --r: -45deg;
   --trans: 0.5s;
-  --mx: 100px;
-  --my: 100px;
 }
 
 @font-face {
@@ -35,8 +33,8 @@ body div.ball {
   border-radius: 50%;
   pointer-events: none;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: var(--my);
+  left: var(--mx);
   transform: translate(-50%, -50%);
   -webkit-backdrop-filter: invert(80%);
           backdrop-filter: invert(80%);
@@ -83,8 +81,8 @@ body .grainy {
   width: 100vw;
   -webkit-mask-image: url(.././assets/landing/grain.png);
           mask-image: url(.././assets/landing/grain.png);
-  -webkit-mask-size: 38%;
-          mask-size: 38%;
+  -webkit-mask-size: 9%;
+          mask-size: 9%;
   background: radial-gradient(circle at var(--mx) var(--my), rgb(167, 167, 167) 2vw, #1e1e1e 10vw);
   mix-blend-mode: color-dodge;
 }
@@ -154,12 +152,26 @@ body .landingPage .card .cardFront h1.title {
   margin-bottom: 1vw;
   font-family: gilroyBold;
 }
+body .landingPage .card .cardFront h2 {
+  font-size: 1.2vw;
+  border-left: 0.3vw solid var(--textcol);
+  padding-left: 1vw;
+  border-radius: 0.1vw;
+  width: 75%;
+}
 body .landingPage .card .cardFront .links {
   font-size: 1.5vw;
   width: 25vw;
   display: flex;
   justify-content: space-between;
   margin-top: 3vw;
+  flex-direction: column;
+}
+body .landingPage .card .cardFront .links a {
+  font-family: "gilroy";
+  padding-bottom: 1vw;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 body .landingPage .card .cardFront .texture {
   position: absolute;
@@ -173,7 +185,7 @@ body .landingPage .card .cardFront .texture {
 body .landingPage .card .cardFront .texture img {
   transition: var(--trans);
   height: 100%;
-  width: auto;
+  width: 100%;
 }
 body .landingPage .card .cardFront#foiled {
   z-index: 1000;
@@ -191,8 +203,8 @@ body .landingPage .holo {
   background-position: var(--h) var(--l);
   -webkit-mask-image: url(".././assets/landing/foil.png");
           mask-image: url(".././assets/landing/foil.png");
-  -webkit-mask-size: 100% 100%;
-          mask-size: 100% 100%;
+  -webkit-mask-size: 25% 100%;
+          mask-size: 25% 100%;
   mix-blend-mode: darken;
   filter: brightness(1) contrast(1) saturate(1);
   opacity: var(--o);
@@ -380,5 +392,20 @@ body.light .projectPage {
   }
   .projectPage .projetctPrev {
     display: none;
+  }
+}
+@media screen and (max-aspect-ratio: 1/1) {
+  .cardBackground {
+    width: 90vw !important;
+  }
+  h1 {
+    font-size: 3vh !important;
+  }
+  h2 {
+    font-weight: unset !important;
+    font-size: 1.4vh !important;
+  }
+  a {
+    font-size: 1.4vh !important;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -25,17 +25,17 @@
     - Affinity❌
 
 
-
+- Page About
 - Prendre des images
+- Page Projet
+    -BKG
+    -Projet Suivant
 - Optimiser les Contenus
 - Gestion des langues
 - Traduire des contenus
-- Structure page Accueil
--PAge Projet
-    -BKG
-    -Projet Suivant
-- Page About
+- Structure page Accueil❌
 - Transi
+-Logo
 - Mouse Intercat Call To Action
 
 
