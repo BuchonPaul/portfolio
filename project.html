@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="style/project.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,8 +27,8 @@
         <div class="projectBackground">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 288 288">
                 <linearGradient id="PSgrad_0" x1="70.711%" x2="0%" y1="70.711%" y2="0%">
-                    <stop offset="0%" stop-color="var(--secolor)" stop-opacity="1" />
-                    <stop offset="100%" stop-color="var(--secolor)" stop-opacity="1" />
+                    <stop offset="0%" stop-color="var(--darkshapecol)" stop-opacity="1" />
+                    <stop offset="100%" stop-color="var(--darkshapecol)" stop-opacity="1" />
                 </linearGradient>
                 <path fill="url(#PSgrad_0)">
                     <animate repeatCount="indefinite" attributeName="d" dur="15s"
@@ -40,7 +40,7 @@
             <div class="topImage">
                 <!-- <h1 id="title">TITLE</h1> -->
             </div>
-            
+
             <div class="projectInfo">
                 <div class="title">
                     <h1 id="titl">TITLE</h1>
@@ -49,30 +49,35 @@
                     <div class="detailGrid">
                         <h3 class="row1">année</h3>
                         <div id="year" class="content row1">
-                            2023
+                            
                         </div>
                         <h3 class="row2">type</h3>
                         <div id="type" class="content row2">
-                            Design UX/UI
-                            Développement Web
+                          
                         </div>
                         <h3 class="row3">Technologies</h3>
-                        <div id="tech"class="content row3">
-                            FIGMA
-                            REACT / MACHIN
+                        <div id="tech" class="content row3">
+                            
                         </div>
                         <h3 class="row4">Liens</h3>
                         <div class="content row4">
-                           <a id="link" href="">Voir le projet</a>
+                            <a id="link" href="">Voir le Projet</a>
                         </div>
                     </div>
-                    <div class="description" id="desc">On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).</div>
+                    <div class="description" id="desc"></div>
                 </div>
                 <div class="detailContainer"></div>
             </div>
+            <div class="projectFooter">
+                <div id="prec">Projet Précédent</div>
+                <div id="next">Projet Suivant</div>
+            </div>
         </div>
         <div class="ball"></div>
+
+    </div>
 </body>
 <script src="./scripts/common.js"></script>
 <script src="./scripts/projectManager.js"></script>
+
 </html>

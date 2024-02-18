@@ -1,9 +1,49 @@
-const root = document.querySelector(":root");
+const root = document.documentElement;
 const body = document.querySelector("body");
 const transDuration = 500;
 let isFliped = false;
 let isFliping = false;
 let projectData;
+
+function onPageLoad() {
+  console.log("load");
+  if (sessionStorage.getItem("light") == "true") {
+    body.classList.add("light");
+  } else {
+    body.classList.remove("light");
+    sessionStorage.setItem("light", false);
+  }
+}
+
+window.addEventListener("pageshow", onPageLoad);
+
+function urlQuerySet(a, b) {
+  var c = JSON.parse(JSON.stringify(a)),
+    d = ("" + (b || window.location.href)).split("#"),
+    e = d[0].split("?"),
+    f = e[0],
+    g = "?";
+  if (d[1]) {
+    var p = ("" + e[1]).split("&");
+    if (p[0]) {
+      var i, j, k;
+      for (i = 0, j = p.length; i < j; i++) {
+        k = p[i].split("=");
+        if (typeof k[0] === "string" && typeof a[k[0]] === "undefined") {
+          c[k[0]] = k[1];
+        }
+      }
+    }
+  }
+  for (i in c) {
+    g +=
+      i +
+      "=" +
+      (typeof c[i] === "string" ? encodeURIComponent(c[i]) : true) +
+      "&";
+  }
+  return f + g.replace(/\&$/, "") + (d[1] ? "#" + d[1] : "");
+}
 
 function loadJsonDatas(file) {
   return new Promise((resolve, reject) => {
@@ -49,7 +89,8 @@ function getQueryParams() {
 }
 
 document.querySelector(".theme").addEventListener("click", () => {
-  if (body.classList.contains("light")) {
+  console.log(sessionStorage.getItem("light"));
+  if (sessionStorage.getItem("light") == "true") {
     body.classList.remove("light");
     sessionStorage.setItem("light", false);
   } else {
@@ -62,17 +103,9 @@ const ball = document.querySelector("div.ball");
 let mouseX = 0;
 let mouseY = 0;
 
-function animate() {
-  root.style = `
-    --mx: ${mouseX}px;
-    --my: ${mouseY}px;
-   `;
-  requestAnimationFrame(animate);
-}
-
-animate();
-
-document.addEventListener("mousemove", function (event) {
-  mouseX = event.pageX;
-  mouseY = event.pageY;
+root.addEventListener("mousemove", function (event) {
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+  root.style.setProperty("--mx", `${mouseX}px`);
+  root.style.setProperty("--my", `${mouseY}px`);
 });

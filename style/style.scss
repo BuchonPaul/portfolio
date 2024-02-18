@@ -25,6 +25,7 @@ body {
     display: flex;
     justify-content: center;
     --backcol: #0e0e0e;
+    --projbackcol: #171717;
     --textcol: #d8d8d8;
     overflow: hidden;
     transition: var(--trans);
@@ -34,7 +35,7 @@ body {
         height: 25px;
         border-radius: 50%;
         pointer-events: none;
-        position: absolute;
+        position: fixed;
         top: var(--my);
         left: var(--mx);
         transform: translate(-50%, -50%);
@@ -85,7 +86,7 @@ body {
     }
 
     .grainy {
-        position: absolute;
+        position: fixed;
         height: 100vh;
         width: 100vw;
         mask-image: url(.././assets/landing/grain.png);
@@ -367,6 +368,7 @@ body {
 
 body.light {
     --backcol: #f0f0f0;
+    --projbackcol: #eaeaea;
     --textcol: #3d3d3d;
 
     .menu {
@@ -480,7 +482,7 @@ body.light {
 @media screen and (max-aspect-ratio: 1/1) {
     .cardBackground {
         width: 90vw !important;
-    }   
+    }
 
     h1 {
         font-size: 3vh !important;
@@ -491,8 +493,8 @@ body.light {
         font-size: 1.4vh !important;
     }
 
-    a {       
-         font-size: 1.4vh !important;
+    a {
+        font-size: 1.4vh !important;
     }
 
 }

@@ -12,10 +12,14 @@
 }
 
 body {
-    background-color: var(--backcol);
-
+    background-color: var(--projbackcol);
+    .menu {
+        background: rgba(0, 0, 0, 0.69) !important;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+    }
     .projectContainer {
-        background-color: var(--backcol);
+        background-color: var(--projbackcol);
         width: 100%;
         display: flex;
         justify-content: center;
@@ -26,7 +30,7 @@ body {
             height: 100vh;
             background: transparent;
             filter: blur(52px) opacity(0.5);
-            transform: scaleY(2) rotate(305deg);
+            transform: scaleY(-3) rotate(86deg);
 
             svg {
                 position: fixed;
@@ -41,11 +45,12 @@ body {
             position: absolute;
             z-index: 10;
             width: 100vw;
-            padding: 0 15vw;
+            padding: 0 10vw;
             display: flex;
             align-items: center;
             flex-direction: column;
-
+            min-height: 100vh;
+            padding-bottom: 9vh !important;   
             .topImage {
                 width: 100%;
                 height: 50vh;
@@ -54,7 +59,7 @@ body {
                 align-items: center;
                 justify-content: center;
                 font-weight: bold;
-                color: var(--primcol);
+                color: var(--darktitlecol);
                 font-size: 2vw;
                 transition: var(--trans);
             }
@@ -73,7 +78,7 @@ body {
                     padding: 10px 0px;
                     font-size: 1.5em;
                     text-transform: uppercase;
-                    color: var(--primcol);
+                    color: var(--darktitlecol);
                     transition: var(--trans);
                 }
 
@@ -93,7 +98,7 @@ body {
                         h3 {
                             grid-column: 1;
                             text-transform: uppercase;
-                            color: var(--primcol);
+                            color: var(--darktitlecol);
                             transition: var(--trans);
                         }
 
@@ -154,7 +159,7 @@ body {
                                 text-transform: uppercase;
                                 font-size: 1.7em;
                                 margin: 20px 0;
-                                color: var(--primcol);
+                                color: var(--darktitlecol);
                             }
 
                             &Image {
@@ -170,27 +175,42 @@ body {
 
                 }
             }
+            .projectFooter {
+                width: 80%;
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                justify-content: space-between;
+                padding: 2vh 0vw;
+                color: var(--textcol);
+                border-top: 1px solid var(--textcol);
+            }       
         }
     }
 }
 body.light {
-    --primcol: var(--darkcol);
+    --darkshapecol: var(--lightshapecol);
     .menu{
         background: rgb(253 253 253 / 72%) !important;
+    }
+    #titl{
+        color: var(--lighttitlecol) !important;
+    }
+    .detTitle{
+        color: var(--lighttitlecol) !important;
+    }
+    .detailGrid{
+        h3{
+            color: var(--lighttitlecol) !important;
+        }
     }
 }
 @media (max-width: 1440px) {
     body {
         
-        .menu {
-            background: rgb(175 175 175 / 8%) !important;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-
         .projectContainer {
             .projectContent {
-                padding: 0 10vw;
+                padding: 0 10vw; 
                 .topImage {
                     font-size: 3vw;
                 }
@@ -214,7 +234,9 @@ body.light {
                         }
                     }
                 }
+                
             }
+  
         }
     }
 }

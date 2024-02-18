@@ -23,14 +23,15 @@
     - Three JS❌
     - Blender❌
     - Affinity❌
-
+    
 
 - Page About
 - Prendre des images
-- Page Projet
-    -BKG
-    -Projet Suivant
-- Optimiser les Contenus
+- Ajouter les contenus écrit et les couleur des projets❌
+- Page Projet❌
+    -BKG❌
+    -Projet Suivant❌
+- Optimiser les Contenus❌
 - Gestion des langues
 - Traduire des contenus
 - Structure page Accueil❌
@@ -47,3 +48,33 @@
                     radial-gradient(at 85% 75%, hsla(226, 61%, 73%, 1) 0px, transparent 50%),
                     radial-gradient(at 50% 80%, hsla(315, 77%, 77%, 1) 0px, transparent 50%),
                     radial-gradient(at 22% 45%, hsla(223, 81%, 64%, 1) 0px, transparent 50%);
+
+
+
+
+                     {
+      "id": 1,
+      "darktitlecol": "#0ad2f9",
+      "lighttitlecol": "#0a89d4",
+      "darkshapecol": "#ffba0b",
+      "title": "Portal 3D Dice",
+      "year": "2023",
+      "type": "Design UX/UI Développement Web",
+      "tech": "Three JS",
+      "link": "https://3dice-paul-poloches-projects.vercel.app/",
+      "desc": "On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut.",
+      "src": "./assets/project/portal/portalshot2.jpg",
+      "detail": [
+        {
+          "title": "Projet",
+          "src": "./assets/project/portal/index.png",
+          "leg": "Petite description de l'image sans plus de détail"
+        },
+        {
+          "src": "./assets/project/portal/index.png"
+        },
+        {
+          "src": "./assets/project/portal/index.png"
+        }
+      ]
+    }

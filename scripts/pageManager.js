@@ -29,11 +29,10 @@ const main = (data) => {
         projetctPrev.style.background = `url(${project.dataset.url}) center/cover no-repeat`;
       });
       project.addEventListener("click", () => {
-        window.location.href =
-          "./project.html?id=" +
-          project.id +
-          "&m=" +
-          (sessionStorage.getItem("light") == "true" ? "1" : "0");
+        window.location.href = "./project.html?id=" + project.id;
+        // +
+        // "&m=" +
+        // (sessionStorage.getItem("light") == "true" ? "1" : "0");
       });
       project.addEventListener("mouseleave", () => {
         projetctPrev.style.opacity = "0";
@@ -96,13 +95,3 @@ const main = (data) => {
 
   initProject(data);
 };
-
-function onPageLoad() {
-  if (sessionStorage.getItem("light") == "true") {
-    body.classList.add("light");
-  } else {
-    body.classList.remove("light");
-    sessionStorage.setItem("light", false);
-  }
-}
-window.addEventListener("pageshow", onPageLoad);

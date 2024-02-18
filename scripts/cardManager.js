@@ -1,6 +1,7 @@
 const intercard = document.querySelector(".landingPage");
 const cardFront = document.querySelector(".cardFront");
 const bounds = intercard.getBoundingClientRect();
+const cardContent = cardFront.innerHTML;
 
 function rotateToMouse() {
   const leftX = mouseX - bounds.x;
@@ -33,15 +34,12 @@ function rotateToMouse() {
 
   let foil_y = ((window.innerWidth / 2 - center.x) * 100) / window.innerWidth;
   let foil_x = ((window.innerHeight / 2 - center.y) * 100) / window.innerHeight;
+  root.style.setProperty("--h", `${foil_x}%`);
+  root.style.setProperty("--l", `${foil_y}%`);
+  root.style.setProperty("--o", `${Math.log(distance) / 5}`);
+  root.style.setProperty("--ah", `-${foil_x}%`);
+  root.style.setProperty("--al", `-${foil_y}%`);
 
-  root.style = `
-        --h: ${foil_x}%;
-        --l: ${foil_y}%;
-        --o:${Math.log(distance) / 5};
-        --ah: -${foil_x}%;
-        --al: -${foil_y}%;
-
-   `;
   if (!isFliping) {
     requestAnimationFrame(rotateToMouse);
   }
