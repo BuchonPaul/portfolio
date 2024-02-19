@@ -12,17 +12,21 @@
 }
 
 body {
-    background-color: var(--projbackcol);
     .menu {
         background: rgba(0, 0, 0, 0.21) !important;
         border-radius: 10px;
         backdrop-filter: blur(10px);
+        opacity: 0;
+        transition: opacity var(--trans);
     }
     .projectContainer {
         background-color: var(--projbackcol);
         width: 100%;
         display: flex;
         justify-content: center;
+        opacity: 0;
+        transition-duration: var(--trans);
+        transition-property: background-color, opacity;
 
         .projectBackground {
             position: fixed;
@@ -61,7 +65,8 @@ body {
                 font-weight: bold;
                 color: var(--darktitlecol);
                 font-size: 2vw;
-                transition: var(--trans);
+                transition-duration: var(--trans);
+                transition-property:color;
             }
 
             .projectInfo {
@@ -70,6 +75,8 @@ body {
                 color: var(--textcol);
                 display: flex;
                 flex-direction: column;
+                transition-duration: var(--trans);
+                transition-property:color;
 
                 .title {
                     margin: 20px 0px 5px 0px;
@@ -79,7 +86,15 @@ body {
                     font-size: 1.5em;
                     text-transform: uppercase;
                     color: var(--darktitlecol);
-                    transition: var(--trans);
+                    transition-duration: var(--trans);
+                    transition-property: border-bottom, color;
+                    display: flex;
+                    justify-content: space-between;
+                    .goAcc{
+                        width: 2em;
+                        filter: invert(1);
+                        transition: filter var(--trans);
+                    }
                 }
 
                 .detailInfo {
@@ -99,7 +114,8 @@ body {
                             grid-column: 1;
                             text-transform: uppercase;
                             color: var(--darktitlecol);
-                            transition: var(--trans);
+                            transition-duration: var(--trans);
+                            transition-property:color;
                         }
 
                         div {
@@ -108,8 +124,8 @@ body {
                             a {
                                 text-decoration: none;
                                 color: var(--textcol);
-                                transition: var(--trans);
-
+                                transition-duration: var(--trans);
+                                transition-property:color;
                                 &:hover {
                                     text-decoration: underline;
                                 }
@@ -147,6 +163,8 @@ body {
                     color: var(--textcol);
                     display: flex;
                     flex-direction: column;
+                    transition-duration: var(--trans);
+                    transition-property:color;
 
                     .paraph {
                         margin-top: 20px;
@@ -160,6 +178,8 @@ body {
                                 font-size: 1.7em;
                                 margin: 20px 0;
                                 color: var(--darktitlecol);
+                                transition-duration: var(--trans);
+                                transition-property:color;
                             }
 
                             &Image {
@@ -184,6 +204,8 @@ body {
                 padding: 2vh 0vw;
                 color: var(--textcol);
                 border-top: 1px solid var(--textcol);
+                transition-duration: var(--trans);
+                transition-property:border-top, color;
             }       
         }
     }
@@ -193,15 +215,26 @@ body.light {
     .menu{
         background: rgba(253, 253, 253, 0.21) !important;
     }
+    .projectInfo{
+        .goAcc{
+            filter: invert(0) !important;
+        }
+    }
     #titl{
         color: var(--lighttitlecol) !important;
+        transition-duration: var(--trans);
+        transition-property: color;
     }
     .detTitle{
         color: var(--lighttitlecol) !important;
+        transition-duration: var(--trans);
+        transition-property: color;
     }
     .detailGrid{
         h3{
             color: var(--lighttitlecol) !important;
+            transition-duration: var(--trans);
+            transition-property: color;
         }
     }
 }
@@ -316,8 +349,6 @@ body.light {
                     }
                     .detailInfo {
                         font-size: 1.1em;
-                        .detailGrid {
-                        }
                     }
                 }
             }

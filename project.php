@@ -35,18 +35,18 @@ if (isset($_GET['id'])) {
     }
     </style>')
     ?>
-    <div class="menu">
+    <div class="menu appear">
         <div class="logo goAcc"></div>
         <div class="action">
-            <div class="lang">FR</div>
+            <!-- <div class="lang">FR</div> -->
             <div class="theme"></div>
             <!-- <div class="detail">☰</div> -->
         </div>
     </div>
-    <div class="projectContainer">
-        <div class="grainy"></div>
+    <div class="projectContainer appear">
+        <!-- <div class="grainy appear"></div> -->
         <div class="projectBackground">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 288 288">
+            <svg x mlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 288 288">
                 <linearGradient id="PSgrad_0" x1="70.711%" x2="0%" y1="70.711%" y2="0%">
                     <stop offset="0%" stop-color="var(--darkshapecol)" stop-opacity="1" />
                     <stop offset="100%" stop-color="var(--darkshapecol)" stop-opacity="1" />
@@ -65,6 +65,7 @@ if (isset($_GET['id'])) {
             <div class="projectInfo">
                 <div class="title">
                     <h1 id="titl"><?= $det['title'] ?></h1>
+                    <img class="goAcc" src="./assets/cross.svg">
                 </div>
                 <div class="detailInfo">
                     <div class="detailGrid">

@@ -19,7 +19,7 @@ include_once('data/data.php');
     <div class="menu">
         <div class="logo goAcc"></div>
         <div class="action">
-            <div class="lang">FR</div>
+            <!-- <div class="lang">FR</div> -->
             <div class="theme"> </div>
             <!-- <div class="detail">☰</div> -->
         </div>
@@ -68,8 +68,8 @@ include_once('data/data.php');
                                 <p class="subtitle">Mon <a href="https://www.linkedin.com/in/paul-buchon-67b520235/">LinkedIn</a> - Mon <a>CV</a></p>
                             </div>
                         </div>
+                        <div class="close showAbout"><img src="./assets/cross.svg"></div>
                     </div>
-                    <div class="close showAbout">X</div>
                 </div>
                 <div class="holo"></div>
                 <div class="cardReflection"></div>
@@ -78,6 +78,7 @@ include_once('data/data.php');
     </div>
     <div class="projectPage">
         <div class="projectContainer">
+            <div class="goAcc"><img src="./assets/cross.svg"></div>
             <div class="projectList">
                 <h1>PROJETS</h1>
                 <ul>
@@ -85,7 +86,7 @@ include_once('data/data.php');
                     foreach ($projects as $key => $value) {
                         echo ('
                         <li class="projectItem" data-url="' . $value["src"] . '" id="' . $value["id"] . '">
-                            <h3 class="link-item">' . $value["title"] . '</h3>
+                            <h3>' . $value["title"] . '</h3>
                             <p class="techno">' . $value["year"] . '</p>
                         </li>
                       ');

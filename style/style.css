@@ -26,6 +26,7 @@ body {
   --projbackcol: #171717;
   --textcol: #d8d8d8;
   overflow: hidden;
+  background-color: var(--backcol);
   transition: var(--trans);
 }
 body div.ball {
@@ -51,6 +52,8 @@ body .menu {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  opacity: 1;
+  transition: opacity var(--trans);
 }
 body .menu .logo {
   height: 50px;
@@ -94,8 +97,8 @@ body .landingPage {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--trans);
-  transition-property: background;
+  opacity: 1;
+  transition: background var(--trans), opacity var(--trans);
 }
 body .landingPage .card {
   position: relative;
@@ -177,6 +180,26 @@ body .landingPage .card .cardFront .front .links a {
   width: -moz-fit-content;
   width: fit-content;
 }
+body .landingPage .card .cardFront .front .links a.link-item {
+  position: relative;
+}
+body .landingPage .card .cardFront .front .links a.link-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  padding-top: 2px;
+  border-radius: 4px;
+  background-color: var(--textcol);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+body .landingPage .card .cardFront .front .links a.link-item:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
 body .landingPage .card .cardFront .front .texture {
   position: absolute;
   right: 0px;
@@ -211,14 +234,6 @@ body .landingPage .card .cardFront .about {
   opacity: 0;
   transition: opacity calc(var(--trans) / 4);
 }
-body .landingPage .card .cardFront .about .close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  pointer-events: all;
-  width: 3vw;
-  height: 3vw;
-}
 body .landingPage .card .cardFront .about .photo {
   position: absolute;
   top: 0;
@@ -229,6 +244,13 @@ body .landingPage .card .cardFront .about .aboutContent {
   margin: 3% 0;
   width: 70%;
   border-left: 0.4vw solid;
+}
+body .landingPage .card .cardFront .about .aboutContent .close {
+  position: absolute;
+  right: 3%;
+  top: 6%;
+  pointer-events: all;
+  width: 3vw;
 }
 body .landingPage .card .cardFront .about .aboutContent .aboutTitle {
   text-transform: uppercase;
@@ -296,7 +318,7 @@ body .landingPage .cardReflection {
   pointer-events: none;
 }
 body .projectPage {
-  display: none;
+  display: flex;
   opacity: 0;
   position: absolute;
   width: 100vw;
@@ -312,6 +334,7 @@ body .projectPage {
   justify-content: flex-end;
   padding: 3vw;
   padding-top: 78px;
+  pointer-events: none;
 }
 body .projectPage .projectContainer {
   display: flex;
@@ -322,6 +345,13 @@ body .projectPage .projectContainer {
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+body .projectPage .projectContainer .goAcc {
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  right: 4vw;
+  pointer-events: all;
 }
 body .projectPage .projectContainer::-webkit-scrollbar {
   display: none;
@@ -350,10 +380,28 @@ body .projectPage .projectContainer .projectList li.projectItem {
 body .projectPage .projectContainer .projectList li.projectItem.appear {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: all;
 }
 body .projectPage .projectContainer .projectList li h3 {
   font-size: 1.5vw;
   font-family: "gilroyBold";
+}
+body .projectPage .projectContainer .projectList li h3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  padding-top: 2px;
+  border-radius: 4px;
+  background-color: var(--textcol);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+body .projectPage .projectContainer .projectList li h3.anim::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 body .projectPage .projectContainer .projectList li p {
   font-size: 1.3vw;
@@ -365,7 +413,7 @@ body .projectPage .projectContainer .projetctPrev {
   border-radius: 15px 0px 0px 15px;
   margin: 0 1vw;
   background: url("") center/cover no-repeat;
-  opacity: 0;
+  margin-top: 4vw;
 }
 body .projectPage .projectDecoration {
   margin-top: 1vw;
@@ -391,6 +439,7 @@ body.light {
   --backcol: #f0f0f0;
   --projbackcol: #eaeaea;
   --textcol: #3d3d3d;
+  background-color: var(--backcol);
 }
 body.light .menu .action div.theme {
   filter: brightness(2.5);
@@ -410,27 +459,6 @@ body.light .landingPage .cardReflection {
 body.light .projectPage {
   -webkit-backdrop-filter: blur(25px) brightness(1);
           backdrop-filter: blur(25px) brightness(1);
-}
-
-.link-item {
-  position: relative;
-}
-.link-item::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  padding-top: 2px;
-  border-radius: 4px;
-  background-color: var(--textcol);
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-.link-item:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
 }
 
 @media (min-width: 1440px) {
@@ -475,9 +503,9 @@ body.light .projectPage {
   .subtitle {
     font-family: gilroy;
     font-weight: unset !important;
-    font-size: 1.4vh !important;
+    font-size: 1.3vh !important;
   }
   a {
-    font-size: 1.4vh !important;
+    font-size: 1.3vh !important;
   }
 }/*# sourceMappingURL=style.css.map */

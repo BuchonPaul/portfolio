@@ -4,8 +4,8 @@
 - Synchroniser le menu et les thèmes ❌
 - Trouver des fonts ❌
 - Follow Mouse ❌
-- Follow Mouse  INTERACT
-- Création page About
+- Follow Mouse  INTERACT ❌
+- Création page About ❌
 - Animations:
     -Fond des détais❌
     -Liens❌

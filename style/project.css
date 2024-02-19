@@ -10,20 +10,22 @@
   display: none;
 }
 
-body {
-  background-color: var(--projbackcol);
-}
 body .menu {
   background: rgba(0, 0, 0, 0.21) !important;
   border-radius: 10px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity var(--trans);
 }
 body .projectContainer {
   background-color: var(--projbackcol);
   width: 100%;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transition-duration: var(--trans);
+  transition-property: background-color, opacity;
 }
 body .projectContainer .projectBackground {
   position: fixed;
@@ -61,7 +63,8 @@ body .projectContainer .projectContent .topImage {
   font-weight: bold;
   color: var(--darktitlecol);
   font-size: 2vw;
-  transition: var(--trans);
+  transition-duration: var(--trans);
+  transition-property: color;
 }
 body .projectContainer .projectContent .projectInfo {
   z-index: 20;
@@ -69,6 +72,8 @@ body .projectContainer .projectContent .projectInfo {
   color: var(--textcol);
   display: flex;
   flex-direction: column;
+  transition-duration: var(--trans);
+  transition-property: color;
 }
 body .projectContainer .projectContent .projectInfo .title {
   margin: 20px 0px 5px 0px;
@@ -78,7 +83,15 @@ body .projectContainer .projectContent .projectInfo .title {
   font-size: 1.5em;
   text-transform: uppercase;
   color: var(--darktitlecol);
-  transition: var(--trans);
+  transition-duration: var(--trans);
+  transition-property: border-bottom, color;
+  display: flex;
+  justify-content: space-between;
+}
+body .projectContainer .projectContent .projectInfo .title .goAcc {
+  width: 2em;
+  filter: invert(1);
+  transition: filter var(--trans);
 }
 body .projectContainer .projectContent .projectInfo .detailInfo {
   display: flex;
@@ -97,7 +110,8 @@ body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid h3 {
   grid-column: 1;
   text-transform: uppercase;
   color: var(--darktitlecol);
-  transition: var(--trans);
+  transition-duration: var(--trans);
+  transition-property: color;
 }
 body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div {
   grid-column: 2;
@@ -105,7 +119,8 @@ body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div 
 body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div a {
   text-decoration: none;
   color: var(--textcol);
-  transition: var(--trans);
+  transition-duration: var(--trans);
+  transition-property: color;
 }
 body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div a:hover {
   text-decoration: underline;
@@ -130,6 +145,8 @@ body .projectContainer .projectContent .projectInfo .detailContainer {
   color: var(--textcol);
   display: flex;
   flex-direction: column;
+  transition-duration: var(--trans);
+  transition-property: color;
 }
 body .projectContainer .projectContent .projectInfo .detailContainer .paraph {
   margin-top: 20px;
@@ -142,6 +159,8 @@ body .projectContainer .projectContent .projectInfo .detailContainer .paraph .de
   font-size: 1.7em;
   margin: 20px 0;
   color: var(--darktitlecol);
+  transition-duration: var(--trans);
+  transition-property: color;
 }
 body .projectContainer .projectContent .projectInfo .detailContainer .paraph .detImage {
   aspect-ratio: 16/9;
@@ -159,6 +178,8 @@ body .projectContainer .projectContent .projectFooter {
   padding: 2vh 0vw;
   color: var(--textcol);
   border-top: 1px solid var(--textcol);
+  transition-duration: var(--trans);
+  transition-property: border-top, color;
 }
 
 body.light {
@@ -167,14 +188,23 @@ body.light {
 body.light .menu {
   background: rgba(253, 253, 253, 0.21) !important;
 }
+body.light .projectInfo .goAcc {
+  filter: invert(0) !important;
+}
 body.light #titl {
   color: var(--lighttitlecol) !important;
+  transition-duration: var(--trans);
+  transition-property: color;
 }
 body.light .detTitle {
   color: var(--lighttitlecol) !important;
+  transition-duration: var(--trans);
+  transition-property: color;
 }
 body.light .detailGrid h3 {
   color: var(--lighttitlecol) !important;
+  transition-duration: var(--trans);
+  transition-property: color;
 }
 
 @media (max-width: 1440px) {
