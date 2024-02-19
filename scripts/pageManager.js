@@ -1,38 +1,17 @@
-loadJsonDatas("./data/pageContent.json")
-  .then((data) => {
-    main(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-const main = (data) => {
+const main = () => {
   const projPage = document.querySelector(".projectPage");
-  const projList = document.querySelector(".projectList ul");
   const projetctPrev = document.querySelector(".projetctPrev");
-  const projListHeader = projList.innerHTML;
+
   const animTiming = 1000;
 
-  const initProject = (data) => {
-    projList.innerHTML = projListHeader;
-    data.projects.forEach((project) => {
-      projList.innerHTML += `
-          <li class="projectItem" data-url="${project.src}" id="${project.id}">
-              <h3 class="link-item">${project.title}</h3>
-              <p class="techno">${project.year}</p>
-          </li>
-        `;
-    });
+  const initProject = () => {
     document.querySelectorAll(".projectItem").forEach((project) => {
       project.addEventListener("mouseenter", () => {
         projetctPrev.style.opacity = "1";
         projetctPrev.style.background = `url(${project.dataset.url}) center/cover no-repeat`;
       });
       project.addEventListener("click", () => {
-        window.location.href = "./project.html?id=" + project.id;
-        // +
-        // "&m=" +
-        // (sessionStorage.getItem("light") == "true" ? "1" : "0");
+        window.location.href = "./project.php?id=" + project.id;
       });
       project.addEventListener("mouseleave", () => {
         projetctPrev.style.opacity = "0";
@@ -105,5 +84,7 @@ const main = (data) => {
     });
   });
 
-  initProject(data);
+  initProject();
 };
+
+main();

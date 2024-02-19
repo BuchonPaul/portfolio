@@ -14,7 +14,7 @@
 body {
     background-color: var(--projbackcol);
     .menu {
-        background: rgba(0, 0, 0, 0.69) !important;
+        background: rgba(0, 0, 0, 0.21) !important;
         border-radius: 10px;
         backdrop-filter: blur(10px);
     }
@@ -191,7 +191,7 @@ body {
 body.light {
     --darkshapecol: var(--lightshapecol);
     .menu{
-        background: rgb(253 253 253 / 72%) !important;
+        background: rgba(253, 253, 253, 0.21) !important;
     }
     #titl{
         color: var(--lighttitlecol) !important;

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include_once('data/data.php');
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -31,7 +34,7 @@
                     <h1 class="name">Paul Buchon</h1>
                     <h1 class="title">Portfolio</h1>
                     <h2 class="subtitle">Bienvenue.
-                        Je suis étudiant et alternant breton en dernière année de BUT MMI & 
+                        Je suis étudiant et alternant breton en dernière année de BUT MMI &
                         un développeur FullStack Junior</h2>
                     <div class="links">
                         <a class="link-item showProj">→ mes projets</a>
@@ -57,19 +60,19 @@
                             </div>
                             <div class="aboutItem">
                                 <div class="aboutBadge"></div>
-                                <a  class="subtitle" href="https://github.com/BuchonPaul">https://github.com/BuchonPaul</a>
+                                <a class="subtitle" href="https://github.com/BuchonPaul">https://github.com/BuchonPaul</a>
                             </div>
                             <div class="aboutItem">
                                 <div class="aboutBadge"></div>
                                 <div class="link"></div>
-                                <p  class="subtitle">Mon <a href="https://www.linkedin.com/in/paul-buchon-67b520235/">LinkedIn</a>   -   Mon <a>CV</a></p>
+                                <p class="subtitle">Mon <a href="https://www.linkedin.com/in/paul-buchon-67b520235/">LinkedIn</a> - Mon <a>CV</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="close showAbout">X</div>
                 </div>
                 <div class="holo"></div>
-                <div class="cardReflection"></div> 
+                <div class="cardReflection"></div>
             </div>
         </div>
     </div>
@@ -78,7 +81,17 @@
             <div class="projectList">
                 <h1>PROJETS</h1>
                 <ul>
-                </ul>   
+                    <?php
+                    foreach ($projects as $key => $value) {
+                        echo ('
+                        <li class="projectItem" data-url="' . $value["src"] . '" id="' . $value["id"] . '">
+                            <h3 class="link-item">' . $value["title"] . '</h3>
+                            <p class="techno">' . $value["year"] . '</p>
+                        </li>
+                      ');
+                    }
+                    ?>
+                </ul>
             </div>
             <div class="projetctPrev"></div>
         </div>
@@ -93,4 +106,5 @@
 <script src="./scripts/common.js"></script>
 <script src="./scripts/cardManager.js"></script>
 <script src="./scripts/pageManager.js"></script>
+
 </html>
