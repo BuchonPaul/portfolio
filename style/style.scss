@@ -163,70 +163,138 @@ body {
                 flex-direction: column;
                 padding: 3vw;
                 color: var(--textcol);
-                transition: var(--trans);
-                transition-property: background, color;
+                transition: background  var(--trans), color  var(--trans);
+                .front{
+                    transition: opacity calc(var(--trans)/4);                
+                    h1 {
+                        text-transform: uppercase;
+                        font-family: gilroy;
+                        font-weight: bolder;
+                        font-size: 3vw;
 
-                h1 {
-                    text-transform: uppercase;
-                    font-family: gilroy;
-                    font-weight: bolder;
-                    font-size: 3vw;
+                        &.name {
+                            font-weight: 100;
+                        }
 
-                    &.name {
-                        font-weight: 100;
+                        &.title {
+                            margin-bottom: 1vw;
+                            font-family: gilroyBold;
+                        }
                     }
 
-                    &.title {
-                        margin-bottom: 1vw;
-                        font-family: gilroyBold;
+                    .subtitle {
+                        font-family: gilroy;
+                        font-size: 1.2vw;
+                        border-left: 0.3vw solid var(--textcol);
+                        padding-left: 1vw;
+                        border-radius: 0.1vw;
+                        width: 75%;
                     }
-                }
 
-                h2 {
-                    font-size: 1.2vw;
-                    border-left: 0.3vw solid var(--textcol);
-                    padding-left: 1vw;
-                    border-radius: 0.1vw;
-                    width: 75%;
-                }
+                    .links {
+                        font-size: 1.5vw;
+                        width: 25vw;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 3vw;
+                        flex-direction: column;
 
-                .links {
-                    font-size: 1.5vw;
-                    width: 25vw;
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 3vw;
-                    flex-direction: column;
-
-                    a {
-                        font-family: "gilroy";
-                        padding-bottom: 1vw;
-                        width: fit-content;
+                        a {
+                            font-family: "gilroy";
+                            padding-bottom: 1vw;
+                            width: fit-content;
+                        }
                     }
-                }
 
-                .texture {
-                    position: absolute;
-                    right: 0px;
-                    top: 0px;
-                    width: 25%;
-                    height: 100%;
-                    background-color: transparent;
-                    transition: var(--trans);
-
-                    img {
-                        transition: var(--trans);
+                    .texture {
+                        position: absolute;
+                        right: 0px;
+                        top: 0px;
+                        width: 25%;
                         height: 100%;
-                        width: 100%;
+                        background-color: transparent;
+                        transition: var(--trans);
+
+                        img {
+                            transition: var(--trans);
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+                    &#foiled {
+                        z-index: 1000;
+
+                        &.flip {
+                            transform: rotateY('160deg');
+                            transition: var(--trans);
+                        }
                     }
                 }
-
-                &#foiled {
-                    z-index: 1000;
-
-                    &.flip {
-                        transform: rotateY('160deg');
-                        transition: var(--trans);
+                .about {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    transform: rotateY(180deg);
+                    top: 0;
+                    left: 0;
+                    pointer-events: none;
+                    opacity: 0;
+                    transition:opacity calc(var(--trans)/4);                
+                    .close{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        pointer-events: all;
+                        width: 3vw;
+                        height: 3vw;
+                    }
+                    .photo {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    .aboutContent{
+                        padding: 0 3%;
+                        margin: 3% 0 ;
+                        width: 70%;
+                        border-left: 0.4vw solid;
+                        .aboutTitle{
+                            text-transform: uppercase;
+                            font-family: gilroybold;
+                            font-weight: bolder;
+                            font-size: 3vw;
+                        }
+                        .aboutDesc{
+                            margin: 2vw 0;
+                            font-size: 1.2vw;
+                        }
+                        .aboutList{
+                            margin-top: 2vw;
+                            .aboutItem{
+                                margin-top: 1vw;
+                                display: flex;
+                                align-items: center;
+                                .aboutBadge{
+                                    width: 2vw;
+                                    height: 2vw;
+                                    background-color: white;
+                                    margin-right: 1vw;
+                                    border-radius: 1vw  ;
+                                }
+                                p{
+                                    font-family: gilroy;
+                                    font-size: 1.2vw;
+                                }
+                                a{
+                                    font-family: gilroy;
+                                    font-size: 1.2vw;
+                                    pointer-events: all;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -260,7 +328,6 @@ body {
             filter: blur(50px);
             pointer-events: none;
         }
-
     }
 
     .projectPage {
@@ -270,7 +337,7 @@ body {
         width: 100vw;
         height: 100vh;
         backdrop-filter: blur(25px) brightness(0.5);
-        transition: 1s;
+        transition: var(--trans);
         transition-property: backdrop-filter, opacity;
         color: var(--textcol);
         flex-direction: column;
@@ -488,7 +555,8 @@ body.light {
         font-size: 3vh !important;
     }
 
-    h2 {
+    .subtitle {
+        font-family: gilroy;
         font-weight: unset !important;
         font-size: 1.4vh !important;
     }

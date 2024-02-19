@@ -74,17 +74,29 @@ const main = (data) => {
     showProject(element);
   });
 
-  document.querySelector(".showAbout").addEventListener("click", (e) => {
-    isFliped = !isFliped;
-    isFliping = true;
-    const saveTrans = cardFront.style.transition;
-    cardFront.style.transition = `transform ${transDuration}ms`;
-    rotateToMouse(e);
-    setTimeout(() => {
-      cardFront.style.transition = saveTrans;
-      isFliping = false;
-      rotateToMouse();
-    }, transDuration);
+  document.querySelectorAll(".showAbout").forEach((element) => {
+    element.addEventListener("click", (e) => {
+      isFliped = !isFliped;
+      isFliping = true;
+      const saveTrans = cardFront.style.transition;
+      cardFront.style.transition = `transform ${transDuration}ms`;
+      rotateToMouse(e);
+      setTimeout(() => {
+        if (!isFliped) {
+          document.querySelector(".about").style.opacity = "0";
+          document.querySelector(".front").style.opacity = "1";
+        } else {
+          document.querySelector(".about").style.opacity = "1";
+          document.querySelector(".front").style.opacity = "0";
+        }
+      }, transDuration / 4);
+
+      setTimeout(() => {
+        cardFront.style.transition = saveTrans;
+        isFliping = false;
+        rotateToMouse();
+      }, transDuration);
+    });
   });
 
   document.querySelectorAll(".goAcc").forEach((element) => {
