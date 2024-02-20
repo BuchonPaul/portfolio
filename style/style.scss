@@ -60,9 +60,10 @@ body {
         .logo {
             height: 50px;
             width: 50px;
-            background: var(--textcol);
-
             margin: 0px 20px;
+            svg{
+                transition: var(--trans);
+            }
         }
 
         .action {
@@ -208,7 +209,7 @@ body {
                             font-family: "gilroy";
                             padding-bottom: 1vw;
                             width: fit-content;
-
+                            margin-bottom: 1vw;
                             &.link-item {
                                 position: relative;
 
@@ -273,12 +274,19 @@ body {
                     opacity: 0;
                     transition: opacity calc(var(--trans)/4);
 
-                  
-
                     .photo {
                         position: absolute;
                         top: 0;
                         left: 0;
+                        width: 30%;
+                        height: 100%;
+                        background-color: white;
+                        transition: background-color var(--trans);
+                        img{
+                            width: 100%;
+                            filter: brightness(0.9);
+                            transition: filter var(--trans);
+                        }
                     }
 
                     .aboutContent {  
@@ -288,11 +296,12 @@ body {
                             top: 6%;
                             pointer-events: all;
                             width: 3vw;
+                            filter: invert(1);
+                            transition: filter var(--trans);
                         }
                         padding: 0 3%;
                         margin: 3% 0;
                         width: 70%;
-                        border-left: 0.4vw solid;
 
                         .aboutTitle {
                             text-transform: uppercase;
@@ -303,7 +312,7 @@ body {
 
                         .aboutDesc {
                             margin: 2vw 0;
-                            font-size: 1.2vw;
+                            font-size: 1.12vw;
                         }
 
                         .aboutList {
@@ -317,9 +326,14 @@ body {
                                 .aboutBadge {
                                     width: 2vw;
                                     height: 2vw;
-                                    background-color: white;
+                                    background-color: var(--backcol);
                                     margin-right: 1vw;
                                     border-radius: 1vw;
+                                    img{
+                                        width: 100%;
+                                        filter: invert(1) ;
+                                        transition: filter var(--trans);
+                                    }
                                 }
 
                                 p {
@@ -331,6 +345,7 @@ body {
                                     font-family: gilroy;
                                     font-size: 1.2vw;
                                     pointer-events: all;
+                                    color: var(--textcol);
                                 }
                             }
                         }
@@ -400,6 +415,8 @@ body {
                 height: 3vw;
                 right:4vw;
                 pointer-events: all;
+                filter: invert(1) ;
+                transition: filter var(--trans);
             }
             &::-webkit-scrollbar {
                 display: none;
@@ -514,13 +531,27 @@ body.light {
             }
         }
     }
-
+    .close {
+        filter: invert(0) !important;
+    }
     .landingPage {
         .card {
             .cardFront {
                 .texture {
                     img {
                         filter: invert(1);
+                    }
+                }
+                .aboutBadge {
+                    img{
+                        filter: invert(0) !important;
+                    }
+                }
+                
+                .photo {
+                    background-color: var(--backcol) !important;
+                    img{
+                        filter: brightness(1)!important;
                     }
                 }
             }
@@ -540,6 +571,9 @@ body.light {
 
     .projectPage {
         backdrop-filter: blur(25px) brightness(1);
+        .goAcc{
+            filter: invert(0) !important;
+        }
     }
 }
 
