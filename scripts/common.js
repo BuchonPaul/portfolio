@@ -80,3 +80,11 @@ root.addEventListener("mousemove", function (event) {
   root.style.setProperty("--mx", `${mouseX}px`);
   root.style.setProperty("--my", `${mouseY}px`);
 });
+document.querySelectorAll(".callToAction").forEach((element) => {
+  element.addEventListener("mouseenter", function (event) {
+    document.querySelector(".ball").classList.add("action");
+  });
+  element.addEventListener("mouseleave", function (event) {
+    document.querySelector(".ball").classList.remove("action");
+  });
+});

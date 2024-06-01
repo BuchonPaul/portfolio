@@ -36,7 +36,7 @@
 - Traduire des contenus
 - Structure page Accueil❌
 - Transi
--Logo
+-Logo❌
 - Mouse Intercat Call To Action
 
 
