@@ -70,7 +70,6 @@ document.querySelector(".theme").addEventListener("click", () => {
   }
 });
 
-const ball = document.querySelector("div.ball");
 let mouseX = 0;
 let mouseY = 0;
 
@@ -80,6 +79,7 @@ root.addEventListener("mousemove", function (event) {
   root.style.setProperty("--mx", `${mouseX}px`);
   root.style.setProperty("--my", `${mouseY}px`);
 });
+
 document.querySelectorAll(".callToAction").forEach((element) => {
   element.addEventListener("mouseenter", function (event) {
     document.querySelector(".ball").classList.add("action");

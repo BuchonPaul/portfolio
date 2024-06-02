@@ -95,6 +95,7 @@ body .menu .action div.theme {
   filter: brightness(0.1) invert(1);
 }
 body .grainy {
+  will-change: background;
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -120,6 +121,7 @@ body .landingPage .card {
   perspective: 200vw;
 }
 body .landingPage .card .cardBackgroundGlow {
+  will-change: transform;
   position: absolute;
   left: 0%;
   top: 0%;
@@ -143,6 +145,7 @@ body .landingPage .card .cardBackground {
   -webkit-filter: blur(0.1vw);
 }
 body .landingPage .card .cardFront {
+  will-change: transform;
   position: absolute;
   left: 4px;
   top: 4px;
@@ -189,17 +192,15 @@ body .landingPage .card .cardFront .front .links {
   margin-top: 3vw;
   flex-direction: column;
 }
-body .landingPage .card .cardFront .front .links a {
+body .landingPage .card .cardFront .front .links .link-item {
   font-family: "gilroy";
   padding-bottom: 1vw;
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 1vw;
-}
-body .landingPage .card .cardFront .front .links a.link-item {
   position: relative;
 }
-body .landingPage .card .cardFront .front .links a.link-item::before {
+body .landingPage .card .cardFront .front .links .link-item::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -212,7 +213,7 @@ body .landingPage .card .cardFront .front .links a.link-item::before {
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
-body .landingPage .card .cardFront .front .links a.link-item:hover::before {
+body .landingPage .card .cardFront .front .links .link-item:hover::before {
   transform-origin: left;
   transform: scaleX(1);
 }
@@ -319,6 +320,7 @@ body .landingPage .card .cardFront .about .aboutContent .aboutList .aboutItem a 
   color: var(--textcol);
 }
 body .landingPage .holo {
+  will-change: background;
   position: absolute;
   inset: 0;
   background: radial-gradient(50% 123.47% at 50% 50%, #00FF94 0%, #FF00C7 100%), linear-gradient(121.28deg, #213100 0%, #FF0000 100%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), linear-gradient(114.9deg, #00C6A2 0%, #6A45A8 100%), radial-gradient(100% 148.07% at 0% 0%, #FFFFFF 0%, #1DCD00 100%);
@@ -335,6 +337,7 @@ body .landingPage .holo {
   pointer-events: none;
 }
 body .landingPage .cardReflection {
+  will-change: background;
   position: absolute;
   inset: 0;
   background: radial-gradient(var(--backcol), #ffffff);

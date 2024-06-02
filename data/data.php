@@ -177,7 +177,7 @@ $translations = [
         'location' => 'France, Bretagne, Saint-Brieuc',
         'email' => 'buchon.paul@gmail.com',
         'github' => 'https://github.com/BuchonPaul',
-        'linkedin' => 'Mon <a class="callToAction" href="https://www.linkedin.com/in/paul-buchon-67b520235/">LinkedIn</a> - Mon <a>CV</a>',
+        'linkedin' => 'Mon <a class="callToAction" href="https://www.linkedin.com/in/paul-buchon-67b520235/">LinkedIn</a> - Mon <a href="./cv/BUCHON_Paul_CV.pdf"  target="_blank">CV</a>',
     ],
     'EN' => [
         'name' => 'Paul Buchon',
@@ -191,6 +191,6 @@ $translations = [
         'location' => 'France, Brittany, Saint-Brieuc',
         'email' => 'buchon.paul@gmail.com',
         'github' => 'https://github.com/BuchonPaul',
-        'linkedin' => 'My <a class="callToAction" href="https://www.linkedin.com/in/paul-buchon-67b520235/">LinkedIn</a> - My <a>Resume</a>',
+        'linkedin' => 'My <a class="callToAction" href="https://www.linkedin.com/in/paul-buchon-67b520235/">LinkedIn</a > - My <a href="./cv/BUCHON_Paul_CV.pdf"  target="_blank">Resume</a>',
     ]
 ];

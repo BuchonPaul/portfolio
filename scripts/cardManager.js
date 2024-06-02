@@ -1,17 +1,30 @@
 const intercard = document.querySelector(".landingPage");
 const cardFront = document.querySelector(".cardFront");
+const cardStyle = cardFront.style;
+const glowStyle = document.querySelector(".cardBackgroundGlow").style;
 const bounds = intercard.getBoundingClientRect();
+const centerX = bounds.width / 2;
+const centerY = bounds.height / 2;
 
-function rotateToMouse() {
+let lastTime = 0;
+const throttleTime = 16; // environ 60 FPS
+function rotateToMouse(timestamp) {
+  if (timestamp - lastTime < throttleTime) {
+    requestAnimationFrame(rotateToMouse);
+    return;
+  }
+
+  lastTime = timestamp;
   const leftX = mouseX - bounds.x;
   const topY = mouseY - bounds.y;
   const center = {
-    x: leftX - bounds.width / 2,
-    y: topY - bounds.height / 2,
+    x: leftX - centerX,
+    y: topY - centerY,
   };
+
   const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
 
-  cardFront.style.transform = `
+  const rotation = `
     rotate3d(
       ${-center.y / 100},
       ${center.x / 100},
@@ -21,7 +34,9 @@ function rotateToMouse() {
     ${isFliped ? "rotateY(180deg)" : ""}
   `;
 
-  document.querySelector(".cardBackgroundGlow").style.transform = `
+  cardStyle.transform = rotation;
+
+  glowStyle.transform = `
     translate3d(
       ${center.x / 400}vw,
       ${center.y / 400}vw,
@@ -39,4 +54,4 @@ function rotateToMouse() {
     requestAnimationFrame(rotateToMouse);
   }
 }
-rotateToMouse();
+requestAnimationFrame(rotateToMouse);

@@ -49,6 +49,9 @@ $trans = $translations[$lang];
 ?>
 
 <head>
+    <meta name="description" content="Bienvenue sur mon portfolio, je suis Paul BUCHON, un étudiant MMI de troisième année. Ce portfolio regroupe mes créations">
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
+    <meta name="author" content="BUCHON Paul">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $_SESSION["lang"] == 'FR' ? 'Portfolio BUCHON Paul' : "BUCHON Paul's Portfolio"; ?></title>
@@ -113,7 +116,7 @@ $trans = $translations[$lang];
             <div class="projectInfo">
                 <div class="title">
                     <h1 id="titl"><?= $det['title'] ?></h1>
-                    <img class="goAcc callToAction" src="./assets/cross.svg">
+                    <img alt="Croix de retour en arrière" class="goAcc callToAction" src="./assets/cross.svg">
                 </div>
                 <div class="detailInfo">
                     <div class="detailGrid">

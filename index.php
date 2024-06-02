@@ -20,6 +20,9 @@ $trans = $translations[$lang];
 ?>
 
 <head>
+    <meta name="description" content="Bienvenue sur mon portfolio, je suis Paul BUCHON, un étudiant MMI de troisième année. Ce portfolio regroupe mes créations">
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
+    <meta name="author" content="BUCHON Paul">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $_SESSION["lang"] == 'FR' ? 'Portfolio BUCHON Paul' : "BUCHON Paul's Portfolio"; ?></title>
@@ -61,16 +64,16 @@ $trans = $translations[$lang];
                     <h1 class="title"><?php echo $trans['title']; ?></h1>
                     <h2 class="subtitle"><?php echo $trans['subtitle']; ?></h2>
                     <div class="links">
-                        <a class="link-item showProj callToAction"><?php echo $trans['projects']; ?></a>
-                        <a class="link-item showAbout callToAction"><?php echo $trans['about']; ?></a>
+                        <div class="link-item showProj callToAction"><?php echo $trans['projects']; ?></div>
+                        <div class="link-item showAbout callToAction"><?php echo $trans['about']; ?></div>
                     </div>
                     <div class="texture">
-                        <img src="./assets/landing/texture.png">
+                        <img alt="Texture de Vague pour la carte" src="./assets/landing/texture.png">
                     </div>
                 </div>
                 <div class="about">
                     <div class="photo">
-                        <img src="./assets/landing/about/self.png">
+                        <img alt="Photo de Paul BUCHON" src="./assets/landing/about/self.png">
                     </div>
                     <div class="aboutContent">
                         <div class="aboutTitle"><?php echo $trans['aboutTitle']; ?></div>
@@ -78,31 +81,31 @@ $trans = $translations[$lang];
                         <div class="aboutList">
                             <div class="aboutItem">
                                 <div class="aboutBadge">
-                                    <img src="./assets/landing/about/pos.png">
+                                    <img alt="Image d'un ping de localisation" src="./assets/landing/about/pos.png">
                                 </div>
                                 <p class="subtitle"><?php echo $trans['location']; ?></p>
                             </div>
                             <div class="aboutItem">
                                 <div class="aboutBadge">
-                                    <img src="./assets/landing/about/mail.png">
+                                    <img alt="Image d'un arobase" src="./assets/landing/about/mail.png">
                                 </div>
                                 <p class="subtitle"><?php echo $trans['email']; ?></p>
                             </div>
                             <div class="aboutItem">
                                 <div class="aboutBadge">
-                                    <img src="./assets/landing/about/gh.png">
+                                    <img alt="Logo GitHub" src="./assets/landing/about/gh.png">
                                 </div>
                                 <a class="subtitle callToAction" href="<?php echo $trans['github']; ?>"><?php echo $trans['github']; ?></a>
                             </div>
                             <div class="aboutItem">
                                 <div class="aboutBadge">
-                                    <img src="./assets/landing/about/info.png">
+                                    <img alt="Image d'un petit I d'information" src="./assets/landing/about/info.png">
                                 </div>
                                 <div class="link"></div>
                                 <p class="subtitle"><?php echo $trans['linkedin']; ?></p>
                             </div>
                         </div>
-                        <div class="close showAbout callToAction"><img src="./assets/cross.svg"></div>
+                        <div class="close showAbout callToAction"><img alt="Croix de retour en arrière" src="./assets/cross.svg"></div>
                     </div>
                 </div>
                 <div class="holo"></div>
@@ -112,7 +115,7 @@ $trans = $translations[$lang];
     </div>
     <div class="projectPage">
         <div class="projectContainer">
-            <div class="goAcc callToAction"><img src="./assets/cross.svg"></div>
+            <div class="goAcc callToAction"><img alt="Croix de retour en arrière" src="./assets/cross.svg"></div>
             <div class="projectList">
                 <h1><?php echo $trans['project']; ?></h1>
                 <ul>
