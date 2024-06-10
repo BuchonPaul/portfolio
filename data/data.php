@@ -205,30 +205,119 @@ $projects = [
             "tech" => "React / AntvJS / TipTap / Websocket",
             "src" => "./assets/project/winxp/shot.gif",
             "link" => "https://winxpreact.vercel.app/",
-            "desc" => "As part of my first major React project, I developed an interface resembling that of Windows XP. The project features “applications” such as Notepad, Word, Internet Explorer, and the Recycle Bin. <br>The idea behind this project is to offer a browser-based work interface, coupled with generative AI. The project supports a multitasking system and desktop management. <br>The architecture of this interface is built with React. The desktop system is managed with the AntVG6 graph management library. The rich text editor is developed using TipTap.<br> As for Internet Explorer, searches are sent to an Express JS server using WebSockets. This server processes the requests and returns real-time responses from a language model hosted on the server.",
+            "desc" => "As part of developing my first major React project, I created an interface inspired by Windows XP. The project includes 'applications' such as Notepad, Word, Internet Explorer, and the Recycle Bin.<br>The idea behind this project is to offer a browser-based workspace interface coupled with a generative AI. The project allows for a 'multi-task' system and desktop management.<br>The architecture of this interface is developed with React. The desktop system is managed with the AntVG6 graph management library. The rich text editor is developed using TipTap.<br>Regarding Internet Explorer, searches are sent to an Express JS server with WebSockets. This server processes the requests and returns real-time responses from a language model hosted on the server.",
             "darktitlecol" => "#ded3c7",
             "darkshapecol" => "#3ddd70",
             "lighttitlecol" => "#3ddd70",
-            "lightshapecol" => "#ded3c7"
+            "lightshapecol" => "#ded3c7",
+            "detail" => [
+                [
+                    "title" => "Project Gallery",
+                    "src" => "./assets/project/winxp/1.png",
+                    "leg" => "Basic interface of the application, with various windows."
+                ],
+                [
+                    "title" => "",
+                    "src" => "./assets/project/winxp/2.png",
+                    "leg" => "Demonstration of multitasking."
+                ],
+                [
+                    "title" => "Technical Details",
+                    "src" => "./assets/project/winxp/3.png",
+                    "leg" => "List of packages and introduction to the application context, all code is available on my GitHub."
+                ]
+            ]
         ],
         [
             "id" => "1",
             "title" => "Koust",
             "year" => "2022 - 2024",
             "type" => "FullStack Development / UX-UI Design",
-            "tech" => "Oracle APEX / Angular/ Ionic / PLSQL",
+            "tech" => "Oracle APEX / Angular / Ionic / PLSQL",
             "src" => "./assets/project/koust/shot.gif",
             "link" => "https://koust.net/",
-            "desc" => "Between September 2022 and August 2024, I worked as a developer in an apprenticeship at Koust, a company that develops a web and mobile application to help manage restaurants. During my apprenticeship, I participated in the development of the web application on Oracle Apex, a development environment centered around an Oracle database. Apex allows for the rapid development of data consultation and alteration interfaces from SQL queries.<br>In parallel with the web interface development, I contributed to the development of the mobile application. This Angular application with an Ionic interface is connected to the Database via the APEX REST API. This application helps facilitate the use of Koust in the manual tasks of a restaurateur (Inventories, recipes, etc.).",
+            "desc" => "Between September 2022 and August 2024, I worked as a developer in a work-study program at Koust, a company that develops a Web and Mobile application to aid restaurant management. During my time there, I participated in the development of the Web application on Oracle Apex, a development environment centered around an Oracle database.<br>Apex allows for rapid development of data consultation and alteration interfaces using SQL queries.<br>In addition to web interface development, I contributed to the development of the Mobile application. This Angular application with an Ionic interface is connected to the Database via the APEX REST API. This application facilitates the use of Koust in the manual tasks of a restaurateur (Inventories, recipes, etc.).",
             "darktitlecol" => "#6e6ff0",
             "lighttitlecol" => "#0002d5",
             "darkshapecol" => "#3e2efe9e",
-            "lightshapecol" => "#0074de5e"
+            "lightshapecol" => "#0074de5e",
+            "detail" => [
+                [
+                    "title" => "Technical Details",
+                    "src" => "./assets/project/koust/3.png",
+                    "leg" => "This is the view of a page in the APEX environment. It shows the overall structure of the page and the detailed queries of the elements."
+                ],
+                [
+                    "title" => "",
+                    "src" => "./assets/project/koust/2.png",
+                    "leg" => "This is the page once it has been put into production."
+                ],
+                [
+                    "title" => "",
+                    "src" => "./assets/project/koust/1.png",
+                    "leg" => "Here is an example of a query, which displays the table shown above."
+                ]
+            ]
         ],
         [
             "id" => "2",
+            "darktitlecol" => "#fff",
+            "lighttitlecol" => "#7c00c1",
+            "darkshapecol" => "#712195",
+            "lightshapecol" => "#ff01c05c",
+            "title" => "Aquarium Project",
+            "year" => "2024",
+            "type" => "Video Game Development / Experience Design",
+            "tech" => "Unity / Kinect / UX Tools",
+            "desc" => "During the first semester of 2024, we worked in groups of five with the aquarium in Trégastel. The aquarium team tasked us with extending the visit duration. Therefore, we had to find devices to implement during the visit to increase the time users spent at the aquarium.<br>The device chosen by the jury from our proposals was a virtual pool projected onto the floor with which users could interact. This device was developed with Unity for the animated part of the pool, coupled with a Kinect to detect movements and a giant screen for the menus. I developed an application from a game engine in response to a real call for proposals.",
+            "src" => "./assets/project/aqua/shot.png",
+            "link" => "https://www.canva.com/design/DAGDTqS5kjg/Hw1lNvC4EPFF_nmxg_DFtg/edit?utm_content=DAGDTqS5kjg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+            "detail" => [
+                [
+                    "title" => "Project Gallery",
+                    "src" => "./assets/project/aqua/1.png",
+                    "leg" => "Here is the Unity project for the aquarium. You can see the pool on the upper screen and the selection menu on the lower screen. The project is not yet finished; this is still a prototype."
+                ],
+                [
+                    "title" => "Pool View",
+                    "src" => "./assets/project/aqua/2.png",
+                    "leg" => "Here is the overhead view of the pool projected onto the floor during use."
+                ],
+                [
+                    "title" => "Project Video",
+                    "vid" => "https://www.youtube.com/embed/39WSSsPIFkQ"
+                ]
+            ]
+        ],
+        [
+            "id" => "3",
+            "darktitlecol" => "#108cd3",
+            "lighttitlecol" => "#ff008f",
+            "darkshapecol" => "#b82199",
+            "lightshapecol" => "#2fd8ff5c",
+            "title" => "#Hackathon Laval Virtual",
+            "year" => "2024",
+            "type" => "Video Game Development / Experience Design",
+            "tech" => "Unity / VR Headsets / UX Tools",
+            "desc" => "From April 10 to 12, 2024, along with three other students from my class, I represented the IUT of Lannion at the #Students – Limited Time contest of the Laval Virtual exhibition. The largest European exhibition on virtual reality technologies and professions, Laval Virtual organizes a time-limited development contest open to students. For 30 hours, we had to work on a project addressing the issue: XR Accessibility, vicarious experience, and perceptual substitution.<br><br>We developed a VR experience combining learning by mimicry and awareness of sensory substitution, where one sense compensates for the dysfunction of another.<br>Our final VR experience, running on MetaQuest2, immersed users in a VR building where all interactions (door handles, buttons) closely emulated reality to facilitate accessibility. Users then had to escape from the same building on fire, while temporarily deprived of sight and/or hearing.",
+            "src" => "./assets/project/laval/shot.webp",
+            "detail" => [
+                [
+                    "title" => "Project Gallery",
+                    "src" => "./assets/project/laval/2.webp",
+                    "leg" => "Here is an image of our project taken during development. It shows the fire from which players must escape."
+                ],
+                [
+                    "title" => "Event Image",
+                    "src" => "./assets/project/laval/1.jpg",
+                    "leg" => "Here is an image of the event, where we are presenting our project in front of the jury and other participants."
+                ]
+            ]
+        ],
+        [
+            "id" => "4",
             "darktitlecol" => "#f9bd0a",
-            "lighttitlecol" => "#0264bc ",
+            "lighttitlecol" => "#0264bc",
             "darkshapecol" => "#004b8e",
             "lightshapecol" => "#ffb40340",
             "title" => "Three JS Dice Game",
@@ -236,48 +325,71 @@ $projects = [
             "type" => "BackEnd Development",
             "tech" => "Three Js / Cannon ES / Blender",
             "link" => "https://3dice-paul-poloches-projects.vercel.app/",
-            "desc" => "In March 2023, to familiarize myself with JavaScript modules and using a 3D engine in the browser, I created a 3D dice game. The project operates with Three Js for the rendering engine and Cannon Es as the physics engine. I modeled the cube, the door, and the panel in Blender.<br>The ambiance of this project is inspired by the game Portal, which is why I added two orange and blue portals in the scene, where each portal shows what is happening in front of the other. For this, I added a camera in front of each portal that orients itself according to the direction of the user’s camera on the other portal.",
+            "desc" => "In March 2023, to familiarize myself with JavaScript modules and the use of a 3D engine in the browser, I created a 3D dice game. The project uses Three Js for the rendering engine and Cannon Es as the physics engine. I modeled the cube, door, and panel in Blender.<br><br>The ambiance of this project is inspired by the game Portal, which is why I added two orange and blue portals to the scene, where each portal shows what is happening in front of the other. To achieve this, I added a camera in front of each portal that orients based on the user's camera direction in the other portal.",
             "src" => "./assets/project/portal/shot.gif",
+            "detail" => [
+                [
+                    "title" => "Project Gallery",
+                    "src" => "./assets/project/portal/1.png",
+                    "leg" => "Here is a close-up view of the application, showing the portals, the die, and the score displayed on the wall."
+                ],
+                [
+                    "title" => "Technical Details",
+                    "src" => "./assets/project/portal/2.png",
+                    "leg" => "In this debug view, you can see in green what manages collisions, such as the cube, platforms, and walls. The yellow vectors are the camera's fields of view, which orient based on the viewing angle in the portals."
+                ]
+            ]
         ],
         [
-            "id" => "3",
+            "id" => "5",
             "darktitlecol" => "#6541ea",
-            "lighttitlecol" => "#6d6d6d ",
+            "lighttitlecol" => "#6d6d6d",
             "darkshapecol" => "#4e4e4e",
             "lightshapecol" => "#6743ea5c",
             "title" => "Google Experience Design",
             "year" => "2023",
             "type" => "Experience Design / Video Editing / Prototyping",
             "tech" => "DaVinci Resolve / Figma / Notion",
-            "desc" => "In December 2023, with a team of 4 people, I carried out an experience design exercise in collaboration with 2 Google employees. This project, conducted over 4 days using Agile methodology, tasked us with conducting a comprehensive review of email, messaging, and their uses to imagine the email of tomorrow.<br>We conducted a documentary study and a quantitative survey among students.<br>Based on the results, we developed a concept of an email resembling more of an instant messaging system. To accompany this concept, I created a short video intended for social media.",
+            "desc" => "In December 2023, with a team of 4 people, I completed an experience design exercise in collaboration with 2 Google employees. This project, conducted over 4 days using Agile methodology, tasked us with reviewing emails, messaging systems, and their uses to imagine the email of tomorrow.<br>We conducted a documentary study and a quantitative survey among students.<br>Based on the results, we conceptualized an email system resembling instant messaging. To accompany this concept, I created a short video for social media.",
             "src" => "./assets/project/google/shot.gif",
-            "link" => "https://www.canva.com/design/DAF28sJmeXo/qgDIepSTMwyMB3wcElfgNA/edit?utm_content=DAF28sJmeXo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+            "link" => "https://www.canva.com/design/DAF28sJmeXo/qgDIepSTMwyMB3wcElfgNA/edit?utm_content=DAF28sJmeXo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+            "detail" => [
+                [
+                    "title" => "Project Gallery",
+                    "src" => "./assets/project/google/1.png",
+                    "leg" => "Here is the final mockup we created for this project, aimed at modernizing email usage by transforming the user interface."
+                ],
+                [
+                    "title" => "Project Video",
+                    "vid" => "https://www.youtube.com/embed/yH40ZyJlhTo"
+                ]
+            ]
         ],
         [
-            "id" => "4",
+            "id" => "6",
             "darktitlecol" => "#fff",
-            "lighttitlecol" => "#7c00c1 ",
-            "darkshapecol" => "#712195",
-            "lightshapecol" => "#ff01c05c",
-            "title" => "2024 Portfolio",
+            "lighttitlecol" => "#434343",
+            "darkshapecol" => "#fcdf44",
+            "lightshapecol" => "#ffd70082",
+            "title" => "Portfolio 2024",
             "year" => "2024",
             "type" => "FullStack Development / UX-UI Design",
-            "tech" => "HTML / CSS / JS",
-            "desc" => "The project you are currently viewing, my portfolio, is what I created at the end of my 3 years of studies in the BUT MMI program. It synthesizes my best projects done in and outside of coursework.<br>Created solely with basic web technologies, this project is a testament to my development skills at the time of its creation.<br>This portfolio is my second; the first was created in 2021 but no longer represented what I wanted to showcase.",
-            "src" => "./assets/project/portfolio/shot.gif"
-        ],
-        [
-            "id" => "5",
-            "darktitlecol" => "#fff",
-            "lighttitlecol" => "#7c00c1 ",
-            "darkshapecol" => "#712195",
-            "lightshapecol" => "#ff01c05c",
-            "title" => "2024 Portfolio",
-            "year" => "2024",
-            "type" => "FullStack Development / UX-UI Design",
-            "tech" => "HTML / CSS / JS",
-            "desc" => "The project you are currently viewing, my portfolio, is what I created at the end of my 3 years of studies in the BUT MMI program. It synthesizes my best projects done in and outside of coursework.<br>Created solely with basic web technologies, this project is a testament to my development skills at the time of its creation.<br>This portfolio is my second; the first was created in 2021 but no longer represented what I wanted to showcase.",
-            "src" => "./assets/project/portfolio/shot.gif"
+            "tech" => "HTML / CSS / JS / PHP",
+            "desc" => "The project you are currently viewing, my portfolio, is the one I completed at the end of my 3 years of studies in the BUT MMI program. It showcases my best projects done both in class and outside.<br>Developed using only basic web technologies, this project is a testament to my development skills at the time it was created.<br>This is my second portfolio; the first one was created in 2021 but no longer represented what I wanted to show, both technically and conceptually. For this portfolio, I chose a clean yet colorful aesthetic. I aimed to create a site that could be easily viewed by everyone, both technically and visually, while maintaining a strong visual identity that reflects my current tastes.<br>This portfolio is indeed a milestone for me, marking my 3 years of training and work-study.",
+            "link" => "https://github.com/BuchonPaul/portfolio",
+            "src" => "./assets/project/portfolio/shot.gif",
+            "detail" => [
+                [
+                    "title" => "Project Gallery",
+                    "src" => "./assets/project/portfolio/1.png",
+                    "leg" => "Here is the project mockup, starting with a UX mockup followed by a UI mockup. It also includes my inspirations and moodboard."
+                ],
+                [
+                    "title" => "My Old Portfolio",
+                    "src" => "./assets/project/portfolio/2.png",
+                    "leg" => "Here is an image of my old portfolio. The structure, colors, and projects displayed no longer represented what I wanted to show."
+                ]
+            ]
         ]
     ]
 
