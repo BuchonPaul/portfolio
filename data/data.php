@@ -65,83 +65,6 @@ $projects = [
         ],
         [
             "id" => "2",
-            "darktitlecol" => "#f9bd0a",
-            "lighttitlecol" => "#0264bc ",
-            "darkshapecol" => "#004b8e",
-            "lightshapecol" => "#ffb40340",
-            "title" => "Jeu de Dé Three JS",
-            "year" => "2023",
-            "type" => "Développement BackEnd",
-            "tech" => "Three Js / Cannon ES / Blender",
-            "link" => "https://3dice-paul-poloches-projects.vercel.app/",
-            "desc" => "En mars 2023, afin de me familiariser avec des modules JavaScript et à l’utilisation d’un moteur 3D sur navigateur, j’ai réalisé un jeu de dé en 3D. Le projet fonctionne avec Three Js pour le moteur de rendu et avec Cannon Es en tant que moteur physique. J’ai modélisé le cube, la porte et le panneau sur Blender.<br><br>L’ambiance de ce projet est inspirée du jeu Portal, c’est pourquoi j’ai ajouté deux portails orange et bleu dans la scène, où chacun des portails montre ce qu’il se passe devant l’autre. Pour cela, j’ai ajouté une caméra devant chaque portail qui s’oriente en fonction de la direction de la caméra utilisateur sur l’autre portail.",
-            "src" => "./assets/project/portal/shot.gif",
-            "detail" =>  [
-                [
-                    "title" => "Galerie du projet",
-                    "src" => "./assets/project/portal/1.png",
-                    "leg" => "Voici une vue rapprochée de l'application, on peut voir les portails, le dé et le score affiché sur le mur."
-                ],
-                [
-                    "title" => "Détails Techniques",
-                    "src" => "./assets/project/portal/2.png",
-                    "leg" => "Sur cette vue avec débugage, on peut voir en vert ce qui gère les collisions, donc le cube, les plateformes et les murs. Les vecteurs jaunes sont les champs de vision des caméras, ils s'orientent en fonction de l'angle de vue dans les portails."
-                ]
-            ]
-        ],
-        [
-            "id" => "3",
-            "darktitlecol" => "#6541ea",
-            "lighttitlecol" => "#6d6d6d ",
-            "darkshapecol" => "#4e4e4e",
-            "lightshapecol" => "#6743ea5c",
-            "title" => "Design Expérience Google",
-            "year" => "2023",
-            "type" => "Design d’expérience / Montage Vidéo / Prototypage",
-            "tech" => "DaVinci Resolve / Figma / Notion",
-            "desc" => "En décembre 2023, avec une équipe de 4 personnes, j’ai réalisé un exercice de design d’expérience en collaboration avec 2 salariés de Google. Ce projet mené sur 4 jours en méthode Agile, nous missionnait de réaliser un tour d’horizon du mail, des messageries et de leurs usages afin d’imaginer l’e-mail de demain.<br>Nous avons effectué une étude documentaire et une enquête quantitative auprès des étudiants.<br>À partir des résultats, nous avons déterminé un concept de mail s’apparentant plus aux systèmes de messageries instantanées. Pour accompagner ce concept, j’ai réalisé une courte vidéo destinée aux réseaux sociaux.",
-            "src" => "./assets/project/google/shot.gif",
-            "link" => "https://www.canva.com/design/DAF28sJmeXo/qgDIepSTMwyMB3wcElfgNA/edit?utm_content=DAF28sJmeXo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-            "detail" =>  [
-                [
-                    "title" => "Galerie du projet",
-                    "src" => "./assets/project/google/1.png",
-                    "leg" => "Voici la maquette finale que nous avons réalisée pour ce projet, elle vise à moderniser l'utilisation des mails en transformant l'interface utilisateur."
-                ],
-                [
-                    "title" => "Vidéo du projet",
-                    "vid" => "https://www.youtube.com/embed/yH40ZyJlhTo"
-                ]
-            ]
-        ],
-        [
-            "id" => "4",
-            "darktitlecol" => "#fff",
-            "lighttitlecol" => "#434343",
-            "darkshapecol" => "#fcdf44",
-            "lightshapecol" => "#ffd70082",
-            "title" => "Portfolio 2024",
-            "year" => "2024",
-            "type" => "Développement FullStack / Design UX-UI",
-            "tech" => "HTML / CSS / JS / PHP",
-            "desc" => "Projet sur lequel vous vous trouvez actuellement, mon portfolio est celui que je réalise à l’issue de mes 3 ans d’études en BUT MMI. Il synthétise mes meilleurs projets réalisés en cours et en dehors.<br>Réalisé uniquement avec des technologies Web de base, ce projet est un témoin de mes compétences en développement à l’instant où je l’ai réalisé.<br>Ce portfolio est mon deuxième, le premier avait été réalisé en 2021 mais ne correspondait plus à ce que je voulais montrer, sur la technique et dans le fond. Pour ce portfolio, j'ai choisi une esthétique épurée mais colorée. J'ai ainsi cherché à créer un site qui puisse être consulté facilement par tout le monde, sur le plan technique et visuel, tout en ayant une identité visuelle forte corrrespondant à mes goûts actuels.<br> Ce portfolio est en effet une étape pour moi, témoignant de mes 3 ans de formation et d'alternance.",
-            "link" => "https://github.com/BuchonPaul/portfolio",
-            "src" => "./assets/project/portfolio/shot.gif",
-            "detail" => [
-                [
-                    "title" => "Galerie du projet",
-                    "src" => "./assets/project/portfolio/1.png",
-                    "leg" => "Voici la maquette du projet, j'ai d'abord commencé par une maquette UX puis une maquette UI. Il y a également mes inspirations et mon moodboard."
-                ],
-                [
-                    "title" => "Mon ancien Portfolio",
-                    "src" => "./assets/project/portfolio/2.png",
-                    "leg" => "Voici une image de mon ancien portfolio, la structure, les couleurs et les projets montrés, ne correspondaient plus à ce que je voulais montrer."
-                ]
-            ]
-        ],
-        [
-            "id" => "5",
             "darktitlecol" => "#fff",
             "lighttitlecol" => "#7c00c1",
             "darkshapecol" => "#712195",
@@ -171,7 +94,7 @@ $projects = [
             ]
         ],
         [
-            "id" => "6",
+            "id" => "3",
             "darktitlecol" => "#108cd3",
             "lighttitlecol" => "#ff008f",
             "darkshapecol" => "#b82199",
@@ -192,6 +115,83 @@ $projects = [
                     "title" => "Image de l'évènement",
                     "src" => "./assets/project/laval/1.jpg",
                     "leg" => "Voici une image de l'évènement, c'est le moment ou nous présentons notre projet, devant le jury et les autres participants"
+                ]
+            ]
+        ],
+        [
+            "id" => "4",
+            "darktitlecol" => "#f9bd0a",
+            "lighttitlecol" => "#0264bc ",
+            "darkshapecol" => "#004b8e",
+            "lightshapecol" => "#ffb40340",
+            "title" => "Jeu de Dé Three JS",
+            "year" => "2023",
+            "type" => "Développement BackEnd",
+            "tech" => "Three Js / Cannon ES / Blender",
+            "link" => "https://3dice-paul-poloches-projects.vercel.app/",
+            "desc" => "En mars 2023, afin de me familiariser avec des modules JavaScript et à l’utilisation d’un moteur 3D sur navigateur, j’ai réalisé un jeu de dé en 3D. Le projet fonctionne avec Three Js pour le moteur de rendu et avec Cannon Es en tant que moteur physique. J’ai modélisé le cube, la porte et le panneau sur Blender.<br><br>L’ambiance de ce projet est inspirée du jeu Portal, c’est pourquoi j’ai ajouté deux portails orange et bleu dans la scène, où chacun des portails montre ce qu’il se passe devant l’autre. Pour cela, j’ai ajouté une caméra devant chaque portail qui s’oriente en fonction de la direction de la caméra utilisateur sur l’autre portail.",
+            "src" => "./assets/project/portal/shot.gif",
+            "detail" =>  [
+                [
+                    "title" => "Galerie du projet",
+                    "src" => "./assets/project/portal/1.png",
+                    "leg" => "Voici une vue rapprochée de l'application, on peut voir les portails, le dé et le score affiché sur le mur."
+                ],
+                [
+                    "title" => "Détails Techniques",
+                    "src" => "./assets/project/portal/2.png",
+                    "leg" => "Sur cette vue avec débugage, on peut voir en vert ce qui gère les collisions, donc le cube, les plateformes et les murs. Les vecteurs jaunes sont les champs de vision des caméras, ils s'orientent en fonction de l'angle de vue dans les portails."
+                ]
+            ]
+        ],
+        [
+            "id" => "5",
+            "darktitlecol" => "#6541ea",
+            "lighttitlecol" => "#6d6d6d ",
+            "darkshapecol" => "#4e4e4e",
+            "lightshapecol" => "#6743ea5c",
+            "title" => "Design Expérience Google",
+            "year" => "2023",
+            "type" => "Design d’expérience / Montage Vidéo / Prototypage",
+            "tech" => "DaVinci Resolve / Figma / Notion",
+            "desc" => "En décembre 2023, avec une équipe de 4 personnes, j’ai réalisé un exercice de design d’expérience en collaboration avec 2 salariés de Google. Ce projet mené sur 4 jours en méthode Agile, nous missionnait de réaliser un tour d’horizon du mail, des messageries et de leurs usages afin d’imaginer l’e-mail de demain.<br>Nous avons effectué une étude documentaire et une enquête quantitative auprès des étudiants.<br>À partir des résultats, nous avons déterminé un concept de mail s’apparentant plus aux systèmes de messageries instantanées. Pour accompagner ce concept, j’ai réalisé une courte vidéo destinée aux réseaux sociaux.",
+            "src" => "./assets/project/google/shot.gif",
+            "link" => "https://www.canva.com/design/DAF28sJmeXo/qgDIepSTMwyMB3wcElfgNA/edit?utm_content=DAF28sJmeXo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+            "detail" =>  [
+                [
+                    "title" => "Galerie du projet",
+                    "src" => "./assets/project/google/1.png",
+                    "leg" => "Voici la maquette finale que nous avons réalisée pour ce projet, elle vise à moderniser l'utilisation des mails en transformant l'interface utilisateur."
+                ],
+                [
+                    "title" => "Vidéo du projet",
+                    "vid" => "https://www.youtube.com/embed/yH40ZyJlhTo"
+                ]
+            ]
+        ],
+        [
+            "id" => "6",
+            "darktitlecol" => "#fff",
+            "lighttitlecol" => "#434343",
+            "darkshapecol" => "#fcdf44",
+            "lightshapecol" => "#ffd70082",
+            "title" => "Portfolio 2024",
+            "year" => "2024",
+            "type" => "Développement FullStack / Design UX-UI",
+            "tech" => "HTML / CSS / JS / PHP",
+            "desc" => "Projet sur lequel vous vous trouvez actuellement, mon portfolio est celui que je réalise à l’issue de mes 3 ans d’études en BUT MMI. Il synthétise mes meilleurs projets réalisés en cours et en dehors.<br>Réalisé uniquement avec des technologies Web de base, ce projet est un témoin de mes compétences en développement à l’instant où je l’ai réalisé.<br>Ce portfolio est mon deuxième, le premier avait été réalisé en 2021 mais ne correspondait plus à ce que je voulais montrer, sur la technique et dans le fond. Pour ce portfolio, j'ai choisi une esthétique épurée mais colorée. J'ai ainsi cherché à créer un site qui puisse être consulté facilement par tout le monde, sur le plan technique et visuel, tout en ayant une identité visuelle forte corrrespondant à mes goûts actuels.<br> Ce portfolio est en effet une étape pour moi, témoignant de mes 3 ans de formation et d'alternance.",
+            "link" => "https://github.com/BuchonPaul/portfolio",
+            "src" => "./assets/project/portfolio/shot.gif",
+            "detail" => [
+                [
+                    "title" => "Galerie du projet",
+                    "src" => "./assets/project/portfolio/1.png",
+                    "leg" => "Voici la maquette du projet, j'ai d'abord commencé par une maquette UX puis une maquette UI. Il y a également mes inspirations et mon moodboard."
+                ],
+                [
+                    "title" => "Mon ancien Portfolio",
+                    "src" => "./assets/project/portfolio/2.png",
+                    "leg" => "Voici une image de mon ancien portfolio, la structure, les couleurs et les projets montrés, ne correspondaient plus à ce que je voulais montrer."
                 ]
             ]
         ]
