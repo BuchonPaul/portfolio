@@ -42,7 +42,7 @@ $trans = $translations[$lang];
             </svg>
         </div>
         <div class="action">
-            <div class="lang">
+            <div class="lang callToAction">
                 <form method="post">
                     <button type="submit" name="change_lang" style="background:none;border:none;color:inherit;font:inherit;cursor:pointer;">
                         <?= $_SESSION["lang"] ?>
@@ -68,7 +68,7 @@ $trans = $translations[$lang];
                         <div class="link-item showAbout callToAction"><?php echo $trans['about']; ?></div>
                     </div>
                     <div class="texture">
-                        <img alt="Texture de Vague pour la carte" src="./assets/landing/texture.png">
+                        <img alt="Texture de Vague pour la carte" src="./assets/landing/texture.webp">
                     </div>
                 </div>
                 <div class="about">
@@ -131,7 +131,7 @@ $trans = $translations[$lang];
                     ?>
                 </ul>
             </div>
-            <div class="projetctPrev"></div>
+            <img class="projetctPrev">
         </div>
         <div class="projectDecoration">
             <div>PORTFOLIO</div>

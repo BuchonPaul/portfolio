@@ -70,15 +70,32 @@ document.querySelector(".theme").addEventListener("click", () => {
   }
 });
 
-let mouseX = 0;
-let mouseY = 0;
+let mouseX = 0,
+  mouseY = 0;
+let posX = 0,
+  posY = 0;
+const lerpFactor = 0.6;
+
+function lerp(a, b, t) {
+  return (1 - t) * a + t * b;
+}
+
+function updateMousePosition() {
+  posX = lerp(posX, mouseX, lerpFactor);
+  posY = lerp(posY, mouseY, lerpFactor);
+
+  root.style.setProperty("--mx", `${posX}px`);
+  root.style.setProperty("--my", `${posY}px`);
+
+  requestAnimationFrame(updateMousePosition);
+}
 
 root.addEventListener("mousemove", function (event) {
   mouseX = event.clientX;
   mouseY = event.clientY;
-  root.style.setProperty("--mx", `${mouseX}px`);
-  root.style.setProperty("--my", `${mouseY}px`);
 });
+
+updateMousePosition();
 
 document.querySelectorAll(".callToAction").forEach((element) => {
   element.addEventListener("mouseenter", function (event) {
@@ -87,4 +104,10 @@ document.querySelectorAll(".callToAction").forEach((element) => {
   element.addEventListener("mouseleave", function (event) {
     document.querySelector(".ball").classList.remove("action");
   });
+});
+document.addEventListener("mousedown", function (event) {
+  document.querySelector(".ball").classList.add("action");
+});
+document.addEventListener("mouseup", function (event) {
+  document.querySelector(".ball").classList.remove("action");
 });

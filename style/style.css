@@ -28,6 +28,7 @@ body {
   overflow: hidden;
   background-color: var(--backcol);
   transition: var(--trans);
+  cursor: default;
 }
 body div.ball {
   width: 25px;
@@ -47,11 +48,22 @@ body div.ball {
   transition-duration: 0.2s;
 }
 body div.ball.action {
-  transform: scale(1.5);
+  transform: scale(1.7);
   filter: invert(1);
   border: 1px rgb(92, 92, 92) solid;
   margin-left: -15px;
   margin-top: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body div.ball.action::after {
+  content: " ";
+  color: transparent;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(92, 92, 92);
+  border-radius: 10px;
 }
 body .callToAction {
   cursor: none;
@@ -327,8 +339,8 @@ body .landingPage .holo {
   background-blend-mode: screen, color-dodge, overlay, difference, normal;
   background-size: 120vw 120vh;
   background-position: var(--h) var(--l);
-  -webkit-mask-image: url(".././assets/landing/foil.png");
-          mask-image: url(".././assets/landing/foil.png");
+  -webkit-mask-image: url(".././assets/landing/foil-min.png");
+          mask-image: url(".././assets/landing/foil-min.png");
   -webkit-mask-size: 25% 100%;
           mask-size: 25% 100%;
   mix-blend-mode: darken;
@@ -444,8 +456,15 @@ body .projectPage .projectContainer .projectList li p {
   font-family: "gilroy";
 }
 body .projectPage .projectContainer .projetctPrev {
+  display: none;
+}
+body .projectPage .projectContainer .projetctPrev[src] {
+  display: block;
+  border: 0px;
   width: 60vw;
-  height: 100%;
+  height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15px 0px 0px 15px;
   margin: 0 1vw;
   background: url("") center/cover no-repeat;

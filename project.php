@@ -6,7 +6,6 @@ session_start();
 if (!isset($_SESSION["lang"])) {
     $_SESSION["lang"] = 'FR';
 }
-$det = [];
 
 if (isset($_POST['change_lang'])) {
     if ($_SESSION["lang"] == 'FR') {
@@ -64,7 +63,7 @@ $trans = $translations[$lang];
 </head>
 
 <body>
-    <div id="projectLenght" style="display:none"><?= count($projects) ?></div>
+    <div id="projectLenght" style="display:none"><?= count($projects['FR']) ?></div>
     <?php
     echo ('<style>
     :root{
@@ -110,7 +109,7 @@ $trans = $translations[$lang];
         <div class="projectContent">
             <?php
             echo (
-                "<div class='topImage' style='background:url(" . $det['src'] . ") center/cover no-repeat'></div>"
+                "<img class='topImage' src='" . $det['src'] . "'>"
             )
             ?>
             <div class="projectInfo">
@@ -138,7 +137,7 @@ $trans = $translations[$lang];
                 <h3 class="row4">' . $trans['links'] . '</h3>
                 
                 <div class="content row4">
-                    <a id="link" class="callToAction" href="' . $det['link'] . '">' . $trans['view_project'] . '</a>
+                    <a target="_blank" id="link" class="callToAction" href="' . $det['link'] . '">' . $trans['view_project'] . '</a>
                 </div>');
                         } ?>
                     </div>
@@ -156,8 +155,11 @@ $trans = $translations[$lang];
                             if (isset($value["src"])) {
                                 echo ('<div id="image' . $key . '" class="detImage" style="background: url(' . $value['src'] . ') center/cover no-repeat"></div>');
                             }
-                            if (isset($value["title"])) {
+                            if (isset($value["leg"])) {
                                 echo ('<div class="detLegende">' . $value['leg'] . '</div></div>');
+                            }
+                            if (isset($value["vid"])) {
+                                echo ('<iframe width="560" height="315" src="' . $value["vid"] . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
                             }
                         }
                     }

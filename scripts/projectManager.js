@@ -1,9 +1,9 @@
-function appearElement() {
-  document.querySelectorAll(".appear").forEach((element) => {
-    element.style.opacity = 1;
-  });
-}
-window.addEventListener("pageshow", appearElement);
+// function appearElement() {
+//   document.querySelectorAll(".appear").forEach((element) => {
+//     element.style.opacity = 1;
+//   });
+// }
+// window.addEventListener("pageshow", appearElement);
 
 const params = getQueryParams();
 

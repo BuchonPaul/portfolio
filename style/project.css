@@ -15,7 +15,7 @@ body .menu {
   border-radius: 10px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  opacity: 0;
+  opacity: 1;
   transition: opacity var(--trans);
 }
 body .projectContainer {
@@ -23,7 +23,7 @@ body .projectContainer {
   width: 100%;
   display: flex;
   justify-content: center;
-  opacity: 0;
+  opacity: 1;
   transition-duration: var(--trans);
   transition-property: background-color, opacity;
 }
@@ -56,6 +56,8 @@ body .projectContainer .projectContent {
 body .projectContainer .projectContent .topImage {
   width: 100%;
   height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0px 0px 50px 50px;
   display: flex;
   align-items: center;
@@ -118,9 +120,11 @@ body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div 
 }
 body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div a {
   text-decoration: none;
-  color: var(--textcol);
-  transition-duration: var(--trans);
+  color: var(--darktitlecol);
   transition-property: color;
+}
+body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div a#link {
+  text-decoration: underline;
 }
 body .projectContainer .projectContent .projectInfo .detailInfo .detailGrid div a:hover {
   text-decoration: underline;
@@ -148,8 +152,18 @@ body .projectContainer .projectContent .projectInfo .detailContainer {
   transition-duration: var(--trans);
   transition-property: color;
 }
+body .projectContainer .projectContent .projectInfo .detailContainer .paraph:has(iframe) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 body .projectContainer .projectContent .projectInfo .detailContainer .paraph {
   margin-top: 20px;
+}
+body .projectContainer .projectContent .projectInfo .detailContainer .paraph iframe {
+  width: 100vw;
+  height: 56.25vw;
 }
 body .projectContainer .projectContent .projectInfo .detailContainer .paraph .detTitle {
   width: 100%;
@@ -205,6 +219,9 @@ body.light .detailGrid h3 {
   color: var(--lighttitlecol) !important;
   transition-duration: var(--trans);
   transition-property: color;
+}
+body.light .detailGrid a {
+  color: var(--lighttitlecol) !important;
 }
 
 @media (max-width: 1440px) {

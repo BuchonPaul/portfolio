@@ -4,7 +4,8 @@ const animTiming = 500;
 
 document.querySelectorAll(".projectItem").forEach((project) => {
   project.addEventListener("mouseenter", () => {
-    projetctPrev.style.background = `url(${project.dataset.url}) center/cover no-repeat`;
+    projetctPrev.src = `${project.dataset.url}`;
+    projetctPrev.style.display = `block`;
     project.querySelector("h3").classList.add("anim");
   });
 
@@ -13,7 +14,8 @@ document.querySelectorAll(".projectItem").forEach((project) => {
   });
 
   project.addEventListener("mouseleave", () => {
-    projetctPrev.style.background = `url('') center/cover no-repeat`;
+    projetctPrev.src = ``;
+    projetctPrev.style.display = `none`;
     project.querySelector("h3").classList.remove("anim");
   });
 });
