@@ -22,29 +22,9 @@ if (isset($_GET['id'])) {
         }
     }
 }
-$translations = [
-    'FR' => [
-        'year' => 'année',
-        'type' => 'type',
-        'technologies' => 'Technologies',
-        'links' => 'Liens',
-        'view_project' => 'Voir le Projet',
-        'prev_project' => 'Projet Précédent',
-        'next_project' => 'Projet Suivant'
-    ],
-    'EN' => [
-        'year' => 'year',
-        'type' => 'type',
-        'technologies' => 'Technologies',
-        'links' => 'Links',
-        'view_project' => 'View Project',
-        'prev_project' => 'Previous Project',
-        'next_project' => 'Next Project'
-    ]
-];
 
 $lang = $_SESSION["lang"];
-$trans = $translations[$lang];
+$trans = $translationsp[$lang];
 ?>
 
 <head>

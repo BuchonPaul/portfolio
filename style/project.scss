@@ -316,6 +316,10 @@ body.light {
 }
 
 @media (max-width: 768px) {
+    #link{font-size: 1.1em !important}
+    .projectFooter {
+        width: 90%!important;}
+
     body {
         .projectContainer {
 
@@ -338,7 +342,7 @@ body.light {
                             grid-gap: 3vw;
                         }
                         .description {
-                            margin-top: 3vw;
+                            margin-top: 5vw;
                         }
                     }
                 }

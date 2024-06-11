@@ -197,7 +197,7 @@ body .landingPage .card .cardFront .front .subtitle {
   width: 75%;
 }
 body .landingPage .card .cardFront .front .links {
-  font-size: 1.5vw;
+  font-size: 2vw;
   width: 25vw;
   display: flex;
   justify-content: space-between;
@@ -540,6 +540,12 @@ body.light .projectPage .goAcc {
   }
 }
 @media (max-width: 900px) {
+  .projetctPrev {
+    display: none !important;
+  }
+  .projectContainer .goAcc {
+    width: 7vw !important;
+  }
   .projectPage .projectList {
     width: 100% !important;
     padding: 5%;
@@ -573,7 +579,7 @@ body.light .projectPage .goAcc {
   .subtitle {
     font-family: gilroy;
     font-weight: unset !important;
-    font-size: 1.3vh !important;
+    font-size: 1.5vh !important;
   }
   a {
     font-size: 1.3vh !important;

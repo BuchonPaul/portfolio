@@ -260,6 +260,12 @@ body.light .detailGrid a {
   }
 }
 @media (max-width: 768px) {
+  #link {
+    font-size: 1.1em !important;
+  }
+  .projectFooter {
+    width: 90% !important;
+  }
   body .projectContainer .projectContent {
     padding: 0 5vw;
   }
@@ -278,7 +284,7 @@ body.light .detailGrid a {
     grid-gap: 3vw;
   }
   body .projectContainer .projectContent .projectInfo .detailInfo .description {
-    margin-top: 3vw;
+    margin-top: 5vw;
   }
 }
 @media (max-width: 400px) {

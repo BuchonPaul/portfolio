@@ -224,7 +224,7 @@ body {
                     }
 
                     .links {
-                        font-size: 1.5vw;
+                        font-size: 2vw;
                         width: 25vw;
                         display: flex;
                         justify-content: space-between;
@@ -622,6 +622,14 @@ body.light {
 }
 
 @media (max-width: 900px) {
+    .projetctPrev{
+        display: none !important;
+    }
+    .projectContainer {
+        .goAcc{
+            width: 7vw !important;
+        }
+    }
     .projectPage {
         .projectList {
             width: 100% !important;
@@ -666,7 +674,7 @@ body.light {
     .subtitle {
         font-family: gilroy;
         font-weight: unset !important;
-        font-size: 1.3vh !important;
+        font-size: 1.5vh !important;
     }
 
     a {

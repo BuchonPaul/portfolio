@@ -74,7 +74,7 @@ $projects = [
             "type" => "Développement Jeu Vidéo / Design Expérience",
             "tech" => "Unity / Kinect / Outils UX",
             "desc" => "Pendant le premier semestre 2024, nous avons, par groupe de cinq, travaillé avec l'aquarium de Trégastel. L'équipe de l'aquarium nous avait missionnés afin de rallonger le temps de visite de celui-ci. Ainsi, nous devions trouver des dispositifs à mettre en place lors de la visite pour rallonger le temps que les utilisateurs passaient dans l'aquarium.<br> Le dispositif ayant été choisi par le jury parmi nos propositions était un bassin virtuel projeté sur le sol avec lequel les utilisateurs pouvaient interagir. Ce dispositif a été développé avec Unity pour la partie animée du bassin, couplé avec une Kinect pour détecter les mouvements et un écran géant pour les menus. J'ai ainsi pu développer une application à partir d'un moteur de jeu en répondant à un appel d'offre réel.",
-            "src" => "./assets/project/aqua/shot.png",
+            "src" => "./assets/project/aqua/shot.gif",
             "link" => "https://www.canva.com/design/DAGDTqS5kjg/Hw1lNvC4EPFF_nmxg_DFtg/edit?utm_content=DAGDTqS5kjg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
             "detail" => [
                 [
@@ -270,7 +270,7 @@ $projects = [
             "type" => "Video Game Development / Experience Design",
             "tech" => "Unity / Kinect / UX Tools",
             "desc" => "During the first semester of 2024, we worked in groups of five with the aquarium in Trégastel. The aquarium team tasked us with extending the visit duration. Therefore, we had to find devices to implement during the visit to increase the time users spent at the aquarium.<br>The device chosen by the jury from our proposals was a virtual pool projected onto the floor with which users could interact. This device was developed with Unity for the animated part of the pool, coupled with a Kinect to detect movements and a giant screen for the menus. I developed an application from a game engine in response to a real call for proposals.",
-            "src" => "./assets/project/aqua/shot.png",
+            "src" => "./assets/project/aqua/shot.gif",
             "link" => "https://www.canva.com/design/DAGDTqS5kjg/Hw1lNvC4EPFF_nmxg_DFtg/edit?utm_content=DAGDTqS5kjg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
             "detail" => [
                 [
@@ -392,27 +392,6 @@ $projects = [
             ]
         ]
     ]
-
-    // [
-    //     "id" => "5",
-    //     "darktitlecol" => "#fff",
-    //     "lighttitlecol" => "#7c00c1 ",
-    //     "darkshapecol" => "#712195",
-    //     "lightshapecol" => "#ff01c05c",
-    //     "title" => "Créations graphiques",
-    //     "year" => "2021 - 2024",
-    //     "type" => "Création Graphique",
-    //     "tech" => "Affinity / Blender / Da Vinci Resolve",
-    //     "desc" => "Durant ma formation BUT MMI (Métiers du Multimédia et de l’Internet) entre 2021 et 2024, j’ai réalisé un certain nombre de productions assistées par ordinateur. De la création graphique, au montage vidéo en passant par la 3D, voici une sélection de mes travaux.",
-    //     "src" => "./assets/project/winxp/index.gif",
-    //     "detail" => [
-    //         [
-    //             "title" => "Projet",
-    //             "src" => "./assets/project/portal/index.gif",
-    //             "leg" => "Petite description de l'image sans plus de détail"
-    //         ]
-    //     ]
-    // ]
 ];
 $translations = [
     'FR' => [
@@ -442,5 +421,25 @@ $translations = [
         'email' => 'buchon.paul@gmail.com',
         'github' => 'https://github.com/BuchonPaul',
         'linkedin' => 'My <a class="callToAction" href="https://www.linkedin.com/in/paul-buchon-67b520235/">LinkedIn</a > - My <a href="./cv/BUCHON_Paul_CV.pdf"  target="_blank">Resume</a>',
+    ]
+];
+$translationsp = [
+    'FR' => [
+        'year' => 'année',
+        'type' => 'type',
+        'technologies' => 'Technologies',
+        'links' => 'Liens',
+        'view_project' => 'Voir le Projet',
+        'prev_project' => 'Projet Précédent',
+        'next_project' => 'Projet Suivant'
+    ],
+    'EN' => [
+        'year' => 'year',
+        'type' => 'type',
+        'technologies' => 'Technologies',
+        'links' => 'Links',
+        'view_project' => 'View Project',
+        'prev_project' => 'Previous Project',
+        'next_project' => 'Next Project'
     ]
 ];
